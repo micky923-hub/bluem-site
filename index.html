@@ -198,6 +198,35 @@
       .btn, html { transition: none; scroll-behavior: auto; }
     }
     .no-js .reveal { opacity: 1; transform: none; }
+
+    /* 메일 앱이 안 열릴 때 보여 주는 안내 */
+    .mail-help[hidden] { display: none; }
+    .mail-help {
+      position: fixed; inset: 0; z-index: 10;
+      display: flex; align-items: flex-end; justify-content: center;
+      background: rgba(12, 35, 64, .45); padding: 16px;
+    }
+    @media (min-width: 760px) { .mail-help { align-items: center; } }
+    .mail-help .sheet {
+      width: 100%; max-width: 420px; background: #fff; border-radius: 20px;
+      padding: 26px 22px 20px; box-shadow: 0 20px 50px rgba(12, 35, 64, .25);
+    }
+    .mail-help h3 { margin: 0 0 6px; font-size: 19px; color: var(--navy); letter-spacing: -0.02em; }
+    .mail-help p { margin: 0 0 18px; color: var(--muted); font-size: 15px; }
+    .mail-help .addr {
+      display: block; margin-bottom: 16px; padding: 12px 14px; border-radius: 12px;
+      background: var(--soft); color: var(--navy); font-weight: 700; text-align: center;
+      user-select: all; -webkit-user-select: all;
+    }
+    .mail-help .row { display: grid; gap: 10px; }
+    .mail-help .opt {
+      display: flex; align-items: center; justify-content: center; min-height: 48px;
+      border-radius: 12px; border: 1px solid var(--line); background: #fff;
+      color: var(--navy); font: inherit; font-weight: 700; font-size: 15px;
+      text-decoration: none; cursor: pointer;
+    }
+    .mail-help .opt.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .mail-help .close { margin-top: 6px; border: 0; background: none; color: var(--muted); font-weight: 500; }
   </style>
 </head>
 <body class="no-js">
@@ -232,7 +261,7 @@
         <p class="eyebrow">Your Reliable Business Partner</p>
         <h1>믿을 수 있는<br>비즈니스 연결.</h1>
         <p class="lead">블루엠파트너스는 새로운 광고 매체와 기술 프로젝트를, 그것이 필요한 기업과 연결합니다.</p>
-        <a class="btn" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">문의하기 <span aria-hidden="true">→</span></a>
+        <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">문의하기 <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -319,7 +348,7 @@
         <p class="label">Contact</p>
         <h2>함께할 일이 있다면</h2>
         <p>광고 매체, 기술 프로젝트, 제휴 문의 모두 편하게 메일 주세요.</p>
-        <a class="btn" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">메일 보내기 <span aria-hidden="true">→</span></a>
+        <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">메일 보내기 <span aria-hidden="true">→</span></a>
         <div class="mail">
           <span id="mail-address">contact@bluem-partners.com</span>
           <button type="button" class="copy" id="copy-mail" aria-live="polite">주소 복사</button>
@@ -336,17 +365,30 @@
     </div>
   </footer>
 
+  <!-- 메일 앱이 열리지 않았을 때 나오는 안내 -->
+  <div class="mail-help" id="mail-help" hidden role="dialog" aria-modal="true" aria-labelledby="mail-help-title">
+    <div class="sheet">
+      <h3 id="mail-help-title">메일 앱이 열리지 않았나요?</h3>
+      <p>아래 주소로 메일을 보내 주세요. 쓰시는 메일에서 바로 보낼 수 있습니다.</p>
+      <span class="addr">contact@bluem-partners.com</span>
+      <div class="row">
+        <button type="button" class="opt primary" id="help-copy">주소 복사</button>
+        <a class="opt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact@bluem-partners.com&amp;su=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D" target="_blank" rel="noopener">Gmail로 쓰기</a>
+        <button type="button" class="opt close" id="help-close">닫기</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.body.classList.remove('no-js');
     document.getElementById('year').textContent = new Date().getFullYear();
-    // 메일 주소 복사
-    var copyBtn = document.getElementById('copy-mail');
-    copyBtn.addEventListener('click', function () {
-      var text = document.getElementById('mail-address').textContent;
+    // 주소 복사 (문의 칸 버튼과 안내 창 버튼이 같이 씀)
+    function copyMail(btn, label) {
+      var text = 'contact@bluem-partners.com';
       function done(ok) {
-        copyBtn.textContent = ok ? '복사됨 ✓' : '복사 안 됨';
-        copyBtn.classList.toggle('done', ok);
-        setTimeout(function () { copyBtn.textContent = '주소 복사'; copyBtn.classList.remove('done'); }, 2000);
+        btn.textContent = ok ? '복사됨 ✓' : '복사 안 됨';
+        btn.classList.toggle('done', ok);
+        setTimeout(function () { btn.textContent = label; btn.classList.remove('done'); }, 2000);
       }
       function fallback() {
         var t = document.createElement('textarea');
@@ -358,7 +400,35 @@
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
       } else { fallback(); }
+    }
+
+    // 메일 버튼: 1.2초 안에 메일 앱으로 넘어가지 않으면 안내 창을 띄운다
+    var help = document.getElementById('mail-help');
+    function openHelp() { help.hidden = false; document.getElementById('help-copy').focus(); }
+    function closeHelp() { help.hidden = true; }
+    document.getElementById('help-close').addEventListener('click', closeHelp);
+    document.getElementById('help-copy').addEventListener('click', function () { copyMail(this, '주소 복사'); });
+    help.addEventListener('click', function (e) { if (e.target === help) closeHelp(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeHelp(); });
+    document.querySelectorAll('.js-mail').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var left = false;
+        function mark() { left = true; }
+        window.addEventListener('blur', mark, { once: true });
+        document.addEventListener('visibilitychange', mark, { once: true });
+        window.addEventListener('pagehide', mark, { once: true });
+        setTimeout(function () {
+          window.removeEventListener('blur', mark);
+          document.removeEventListener('visibilitychange', mark);
+          window.removeEventListener('pagehide', mark);
+          if (!left && document.visibilityState === 'visible') openHelp();
+        }, 1200);
+      });
     });
+
+    // 문의 칸의 주소 복사 버튼
+    var copyBtn = document.getElementById('copy-mail');
+    copyBtn.addEventListener('click', function () { copyMail(copyBtn, '주소 복사'); });
 
     var items = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {

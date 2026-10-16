@@ -127,6 +127,32 @@
     .card .bar { display: block; width: 36px; height: 6px; border-radius: 3px; margin-bottom: 22px; }
     .card h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -0.02em; color: var(--navy); }
     .card p { margin: 0; color: var(--muted); font-size: 16px; }
+    .card .more {
+      display: inline-block; margin-top: 14px; color: var(--blue);
+      font-size: 15px; font-weight: 600; text-decoration: none;
+    }
+    .card .more:hover { text-decoration: underline; }
+
+    /* ④-2 운영 사례 */
+    .case {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 28px 24px; border: 1px solid var(--line); border-radius: 18px;
+      background: #fff; text-decoration: none; color: inherit;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+    }
+    .case:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12, 35, 64, .08); transform: translateY(-2px); }
+    .case:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+    .case-mark {
+      flex: none; display: grid; place-items: center;
+      width: 64px; height: 64px; border-radius: 16px;
+      background: var(--navy); color: #fff; font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+    }
+    .case-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .case-tag { color: var(--blue); font-size: 14px; font-weight: 700; }
+    .case-body strong { font-size: 22px; color: var(--navy); letter-spacing: -0.02em; }
+    .case-desc { color: var(--muted); max-width: 40em; }
+    .case-link { margin-top: 6px; color: var(--blue); font-weight: 600; font-size: 15px; }
+    @media (max-width: 480px) { .case { flex-direction: column; gap: 16px; } .case-mark { width: 52px; height: 52px; font-size: 18px; border-radius: 14px; } }
 
     /* ⑤ 일하는 방식 */
     .ways { display: grid; gap: 28px; grid-template-columns: 1fr; }
@@ -239,8 +265,26 @@
             <span class="bar" style="background: var(--sky)"></span>
             <h3>디지털 미디어 운영</h3>
             <p>블로그·사이트를 기획하고 운영해 콘텐츠와 수익 구조를 만듭니다.</p>
+            <a class="more" href="#work">운영 사례 보기 <span aria-hidden="true">↓</span></a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ④-2 운영 사례: 사례가 늘면 .case 카드를 하나씩 추가한다 -->
+    <section class="block" id="work">
+      <div class="wrap">
+        <p class="label reveal">Our Work</p>
+        <h2 class="reveal">블루엠파트너스가 운영하는 미디어</h2>
+        <a class="case reveal" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
+          <span class="case-mark" aria-hidden="true">FD</span>
+          <span class="case-body">
+            <span class="case-tag">생활 금융 정보 블로그</span>
+            <strong>Financial Diary</strong>
+            <span class="case-desc">세금·연금·대출처럼 생활에 꼭 필요한 금융 정보를 쉽게 풀어 쓰는 블로그입니다. 블루엠파트너스가 콘텐츠 기획부터 사이트 개발·운영, 검색 노출까지 맡고 있습니다.</span>
+            <span class="case-link">financialdiary.co.kr 방문하기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
       </div>
     </section>
 

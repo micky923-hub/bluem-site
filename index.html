@@ -68,9 +68,11 @@
     .hero {
       position: relative; overflow: hidden;
       background: var(--navy); color: #fff;
-      min-height: 88vh; min-height: 88svh;
       display: flex; align-items: center;
-      padding: 110px 0 72px;
+      padding: 120px 0 96px;
+    }
+    @media (min-width: 760px) {
+      .hero { min-height: 600px; padding: 140px 0 110px; }
     }
     .hero .mark {
       position: absolute; right: -6%; bottom: -4%;

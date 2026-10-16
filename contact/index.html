@@ -59,7 +59,7 @@
 
         <div class="field">
           <label for="name">이름<span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="이름" required autocomplete="name" maxlength="50">
+          <input type="text" id="name" name="name" required autocomplete="name" maxlength="50">
         </div>
 
         <div class="field">
@@ -69,39 +69,39 @@
 
         <div class="field">
           <label for="company">회사명<span class="opt-tag">(선택)</span></label>
-          <input type="text" id="company" name="회사명" autocomplete="organization" maxlength="100">
+          <input type="text" id="company" name="company" autocomplete="organization" maxlength="100">
         </div>
 
         <div class="field">
           <label for="phone">연락처<span class="opt-tag">(선택)</span></label>
-          <input type="tel" id="phone" name="연락처" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="전화 답변을 원하시면 적어 주세요">
+          <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="전화 답변을 원하시면 적어 주세요">
         </div>
 
         <fieldset class="field">
           <legend>문의 유형<span class="req" aria-hidden="true">*</span></legend>
           <div class="choices two">
-            <label class="choice"><input type="radio" name="문의 유형" value="광고 매체" required> 광고 매체</label>
-            <label class="choice"><input type="radio" name="문의 유형" value="기술 프로젝트"> 기술 프로젝트</label>
-            <label class="choice"><input type="radio" name="문의 유형" value="미디어 운영"> 미디어 운영</label>
-            <label class="choice"><input type="radio" name="문의 유형" value="제휴·기타"> 제휴·기타</label>
+            <label class="choice"><input type="radio" name="inquiry_type" value="광고 매체" required> 광고 매체</label>
+            <label class="choice"><input type="radio" name="inquiry_type" value="기술 프로젝트"> 기술 프로젝트</label>
+            <label class="choice"><input type="radio" name="inquiry_type" value="미디어 운영"> 미디어 운영</label>
+            <label class="choice"><input type="radio" name="inquiry_type" value="제휴·기타"> 제휴·기타</label>
           </div>
         </fieldset>
 
         <div class="field">
           <label for="message">문의 내용<span class="req" aria-hidden="true">*</span></label>
-          <textarea id="message" name="문의 내용" required maxlength="3000" placeholder="필요하신 내용, 일정, 예산 등을 편하게 적어 주세요."></textarea>
+          <textarea id="message" name="message" required maxlength="3000" placeholder="필요하신 내용, 일정, 예산 등을 편하게 적어 주세요."></textarea>
         </div>
 
         <fieldset class="field">
           <legend>어떻게 알게 되셨나요?<span class="opt-tag">(선택)</span></legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="유입 경로" value="명함"> 명함</label>
-            <label class="choice"><input type="radio" name="유입 경로" value="지인 추천"> 지인 추천</label>
-            <label class="choice"><input type="radio" name="유입 경로" value="검색(네이버, 구글 등)"> 검색 (네이버, 구글 등)</label>
-            <label class="choice"><input type="radio" name="유입 경로" value="운영 미디어(Financial Diary 등)"> 운영 미디어 (Financial Diary 등)</label>
-            <label class="choice"><input type="radio" name="유입 경로" value="기타" id="src-etc"> 기타</label>
+            <label class="choice"><input type="radio" name="referral" value="명함"> 명함</label>
+            <label class="choice"><input type="radio" name="referral" value="지인 추천"> 지인 추천</label>
+            <label class="choice"><input type="radio" name="referral" value="검색(네이버, 구글 등)"> 검색 (네이버, 구글 등)</label>
+            <label class="choice"><input type="radio" name="referral" value="운영 미디어(Financial Diary 등)"> 운영 미디어 (Financial Diary 등)</label>
+            <label class="choice"><input type="radio" name="referral" value="기타" id="src-etc"> 기타</label>
           </div>
-          <input type="text" class="etc-input" id="src-etc-text" name="유입 경로(기타)" maxlength="100" placeholder="직접 입력" hidden>
+          <input type="text" class="etc-input" id="src-etc-text" name="referral_other" maxlength="100" placeholder="직접 입력" hidden>
         </fieldset>
 
         <section class="consent" aria-labelledby="consent-title">
@@ -113,7 +113,7 @@
             <li>동의하지 않으셔도 되지만, 이 경우 양식으로는 문의하실 수 없습니다. 메일로 직접 보내 주셔도 됩니다.</li>
           </ul>
           <p style="margin:0 0 12px;font-size:15px;"><a href="/privacy/" target="_blank" rel="noopener">개인정보처리방침 자세히 보기</a></p>
-          <label class="agree"><input type="checkbox" name="개인정보 동의" value="동의함" required id="agree"> 위 내용에 동의합니다.</label>
+          <label class="agree"><input type="checkbox" name="privacy_consent" value="동의함" required id="agree"> 위 내용에 동의합니다.</label>
         </section>
 
         <button type="submit" class="btn block" id="submit-btn">문의 보내기</button>
@@ -151,7 +151,7 @@
 
     // "기타"를 고르면 직접 입력 칸을 보여 준다
     var etcText = document.getElementById('src-etc-text');
-    form.querySelectorAll('input[name="유입 경로"]').forEach(function (r) {
+    form.querySelectorAll('input[name="referral"]').forEach(function (r) {
       r.addEventListener('change', function () {
         etcText.hidden = !document.getElementById('src-etc').checked;
         if (!etcText.hidden) etcText.focus(); else etcText.value = '';
@@ -170,12 +170,27 @@
       var message = document.getElementById('message');
       if (!name.value.trim()) return showError('이름을 적어 주세요.', name), false;
       if (!email.value.trim() || !email.checkValidity()) return showError('답변 받으실 이메일 주소를 정확히 적어 주세요.', email), false;
-      if (!form.querySelector('input[name="문의 유형"]:checked')) {
-        return showError('문의 유형을 골라 주세요.', form.querySelector('input[name="문의 유형"]')), false;
+      if (!form.querySelector('input[name="inquiry_type"]:checked')) {
+        return showError('문의 유형을 골라 주세요.', form.querySelector('input[name="inquiry_type"]')), false;
       }
       if (!message.value.trim()) return showError('문의 내용을 적어 주세요.', message), false;
       if (!document.getElementById('agree').checked) return showError('개인정보 수집·이용에 동의해 주세요.', document.getElementById('agree')), false;
       return true;
+    }
+
+    // 메일에 보일 칸 이름. 접수 서비스가 한글 칸 이름을 깨뜨려서 영문으로 보낸다(값은 한글 그대로)
+    function payload() {
+      var fd = new FormData(form), v = function (k) { return (fd.get(k) || '').toString().trim(); };
+      var ref = v('referral') === '기타' ? '기타: ' + (v('referral_other') || '-') : (v('referral') || '-');
+      return {
+        access_key: v('access_key'), subject: v('subject'), from_name: v('from_name'),
+        botcheck: fd.get('botcheck') ? true : '',
+        name: v('name'), email: v('email'),
+        'Company': v('company') || '-', 'Phone': v('phone') || '-',
+        'Inquiry Type': v('inquiry_type'), message: v('message'),
+        'Referral': ref,
+        'Privacy Consent': fd.get('privacy_consent') ? 'Agreed (동의함)' : ''
+      };
     }
 
     form.addEventListener('submit', function (e) {
@@ -185,12 +200,16 @@
       if (!ready) return showError('지금은 미리보기라 전송되지 않습니다.');
 
       // 메일 제목: [홈페이지 문의] 문의 유형 - 회사명(없으면 이름)
-      var type = form.querySelector('input[name="문의 유형"]:checked').value;
+      var type = form.querySelector('input[name="inquiry_type"]:checked').value;
       var who = document.getElementById('company').value.trim() || document.getElementById('name').value.trim();
       form.querySelector('input[name="subject"]').value = '[홈페이지 문의] ' + type + ' - ' + who;
 
       btn.disabled = true; btn.textContent = '보내는 중…';
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload())
+      })
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (data && data.success) {

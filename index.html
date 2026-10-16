@@ -99,6 +99,9 @@
     }
     .btn:hover { background: #2A6FC8; transform: translateY(-1px); }
     .btn:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+    .btn.ghost { background: #fff; color: var(--navy); border: 1px solid #CBD3DF; }
+    .btn.ghost:hover { background: #fff; border-color: var(--blue); color: var(--blue); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
     /* 공통 구역 */
     section.block { padding: 84px 0; }
@@ -189,6 +192,7 @@
     }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; align-items: center; }
     footer .slogan { color: var(--navy); font-weight: 600; }
+    footer a { color: var(--muted); }
 
     /* 스크롤 때 살짝 나타나기 (움직임 줄이기 설정이면 끔) */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
@@ -261,7 +265,7 @@
         <p class="eyebrow">Your Reliable Business Partner</p>
         <h1>믿을 수 있는<br>비즈니스 연결.</h1>
         <p class="lead">블루엠파트너스는 새로운 광고 매체와 기술 프로젝트를, 그것이 필요한 기업과 연결합니다.</p>
-        <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">문의하기 <span aria-hidden="true">→</span></a>
+        <a class="btn" href="/contact/">문의하기 <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -347,8 +351,11 @@
       <div class="wrap reveal">
         <p class="label">Contact</p>
         <h2>함께할 일이 있다면</h2>
-        <p>광고 매체, 기술 프로젝트, 제휴 문의 모두 편하게 메일 주세요.</p>
-        <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">메일 보내기 <span aria-hidden="true">→</span></a>
+        <p>광고 매체, 기술 프로젝트, 미디어 운영, 제휴 문의 모두 편하게 남겨 주세요.</p>
+        <div class="actions">
+          <a class="btn" href="/contact/">문의하기 <span aria-hidden="true">→</span></a>
+          <a class="btn ghost js-mail" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">메일 보내기</a>
+        </div>
         <div class="mail">
           <span id="mail-address">contact@bluem-partners.com</span>
           <button type="button" class="copy" id="copy-mail" aria-live="polite">주소 복사</button>
@@ -361,7 +368,7 @@
   <footer>
     <div class="wrap">
       <span class="slogan">믿을 수 있는 비즈니스 연결.</span>
-      <span>© <span id="year">2026</span> 블루엠파트너스 BlueM Partners</span>
+      <span>© <span id="year">2026</span> 블루엠파트너스 BlueM Partners · <a href="/privacy/">개인정보처리방침</a></span>
     </div>
   </footer>
 

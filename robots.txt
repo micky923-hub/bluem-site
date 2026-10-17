@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bluem-partners.com/sitemap.xml
+
+#DaumWebMasterTool:32e4963b9b483e209c649b30747870079a5aa0817cb254f13c4564765eb8c678:nmRPv+AMqgHpYd33WRjhZA==

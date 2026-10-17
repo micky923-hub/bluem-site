@@ -48,6 +48,9 @@
     "slogan": "믿을 수 있는 비즈니스 연결. Your Reliable Business Partner.",
     "description": "새로운 광고 매체와 기술 프로젝트를, 그것이 필요한 기업과 연결하는 세일즈 하우스",
     "email": "contact@bluem-partners.com",
+    "sameAs": [
+      "https://www.youtube.com/@bluem-partners"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
@@ -253,6 +256,8 @@
     footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; align-items: center; }
     footer .slogan { color: var(--navy); font-weight: 600; }
     footer a { color: var(--muted); }
+    footer .yt { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--muted); }
+    footer .yt:hover { color: #FF0000; }
 
     /* 스크롤 때 살짝 나타나기 (움직임 줄이기 설정이면 끔) */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
@@ -429,6 +434,7 @@
     <div class="wrap">
       <span class="slogan">믿을 수 있는 비즈니스 연결.</span>
       <span>© <span id="year">2026</span> 블루엠파트너스 BlueM Partners · <a href="/privacy/">개인정보처리방침</a></span>
+      <a class="yt" href="https://www.youtube.com/@bluem-partners" target="_blank" rel="noopener" aria-label="블루엠파트너스 유튜브 채널"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>YouTube</span></a>
     </div>
   </footer>
 

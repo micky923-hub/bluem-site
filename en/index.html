@@ -9,6 +9,8 @@
   <link rel="canonical" href="https://bluem-partners.com/en/">
   <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/">
   <link rel="alternate" hreflang="en" href="https://bluem-partners.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://bluem-partners.com/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bluem-partners.com/zh/">
   <link rel="alternate" hreflang="x-default" href="https://bluem-partners.com/">
   <meta name="theme-color" content="#0C2340">
   <meta property="og:type" content="website">
@@ -74,6 +76,14 @@
             border-radius: 999px; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .02em; }
     .lang:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 
+    .lang-menu { position: relative; }
+    .lang-menu summary { list-style: none; cursor: pointer; }
+    .lang-menu summary::-webkit-details-marker { display: none; }
+    .lang-menu ul { position: absolute; right: 0; top: calc(100% + 8px); margin: 0; padding: 6px; list-style: none; min-width: 150px;
+                    background: #fff; border-radius: 12px; box-shadow: 0 12px 30px rgba(12,35,64,.25); z-index: 5; }
+    .lang-menu li a { display: block; padding: 9px 12px; border-radius: 8px; color: var(--navy); text-decoration: none; font-size: 15px; font-weight: 600; }
+    .lang-menu li a:hover { background: var(--soft); }
+    .lang-menu li a[aria-current="page"] { color: var(--blue); }
     /* ② 첫 화면 */
     .hero {
       position: relative; overflow: hidden;
@@ -260,7 +270,7 @@
         </svg>
         BlueM Partners
       </a>
-      <a class="lang" href="/" hreflang="ko" lang="ko" aria-label="한국어"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>KO</a>
+      <details class="lang-menu"><summary class="lang" aria-label="Language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>EN ▾</summary><ul><li><a href="/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/en/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文（简体）</a></li></ul></details>
     </div>
   </header>
 
@@ -403,6 +413,8 @@
 
   <script>
     document.body.classList.remove('no-js');
+    // 언어 메뉴: 바깥을 누르면 닫기
+    document.addEventListener('click', function (e) { var m = document.querySelector('.lang-menu'); if (m && m.open && !m.contains(e.target)) m.open = false; });
     document.getElementById('year').textContent = new Date().getFullYear();
     // 주소 복사 (문의 칸 버튼과 안내 창 버튼이 같이 씀)
     function copyMail(btn, label) {

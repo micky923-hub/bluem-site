@@ -186,6 +186,15 @@
     .way p { margin: 0; color: var(--muted); }
     .ways-intro { margin: -12px 0 40px; font-size: 18px; color: var(--ink); max-width: 36em; }
 
+    /* ⑤-2 대표 소개 */
+    .person {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 28px 24px; border: 1px solid var(--line); border-radius: 18px; background: #fff;
+    }
+    .person ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; }
+    .person li { font-size: 16px; color: var(--ink); }
+    @media (max-width: 480px) { .person { flex-direction: column; gap: 16px; } }
+
     /* ⑥ 문의 */
     .contact { text-align: center; }
     .contact h2 { margin-bottom: 14px; }
@@ -364,6 +373,28 @@
           <div class="way reveal">
             <strong>Long-term partnership</strong>
             <p>We aim to be the partner you come back to, not a one-time vendor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤-2 대표 소개 -->
+    <section class="block" id="people">
+      <div class="wrap">
+        <p class="label reveal">People</p>
+        <h2 class="reveal">Who you'll work with</h2>
+        <div class="person reveal">
+          <span class="case-mark"><svg viewBox="0 0 2000 1536" width="36" aria-hidden="true"><rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/><rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/><rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/><rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/><rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/></svg></span>
+          <div class="case-body">
+            <span class="case-tag">Founder</span>
+            <strong>Dong-soo Ban</strong>
+            <span class="case-desc">For more than 20 years I have worked across web, media and ad tech. At BlueM Partners I use that experience to connect new ad media and technology with the companies that need them.</span>
+            <ul>
+              <li>Founded and ran a web agency (2003–2012)</li>
+              <li>Led an online video platform business and a Google Ad Manager 360 partner business</li>
+              <li>Partnerships with cloud companies, including AWS and Bespin Global</li>
+              <li>Distributed Korean animation IP to major video platforms in China</li>
+            </ul>
           </div>
         </div>
       </div>

@@ -193,6 +193,7 @@
     }
     .person ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; }
     .person li { font-size: 16px; color: var(--ink); }
+    .nowrap { white-space: nowrap; }
     @media (max-width: 480px) { .person { flex-direction: column; gap: 16px; } }
 
     /* ⑥ 문의 */
@@ -388,10 +389,10 @@
           <span class="case-mark"><svg viewBox="0 0 2000 1536" width="36" aria-hidden="true"><rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/><rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/><rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/><rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/><rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/></svg></span>
           <div class="case-body">
             <span class="case-tag">代表</span>
-            <strong>Ban Dong-soo</strong>
+            <strong>潘东洙</strong>
             <span class="case-desc">拥有二十多年网站、媒体与广告技术领域的从业经验。在 BlueM Partners，以这些经验将新的广告媒体与技术，连接给真正需要它们的企业。</span>
             <ul>
-              <li>创办并经营网站建设公司（2003–2012）</li>
+              <li>创办并经营网站建设公司<span class="nowrap">（2003–2012）</span></li>
               <li>统筹视频平台业务及 Google Ad Manager 360 合作伙伴业务</li>
               <li>与 AWS、Bespin Global 等云服务企业开展合作</li>
               <li>统筹儿童 OTT「Pororo TV」合作项目，并将韩国动画 IP 发行至中国主要视频平台</li>

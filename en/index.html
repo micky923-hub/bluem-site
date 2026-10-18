@@ -193,6 +193,7 @@
     }
     .person ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; }
     .person li { font-size: 16px; color: var(--ink); }
+    .nowrap { white-space: nowrap; }
     @media (max-width: 480px) { .person { flex-direction: column; gap: 16px; } }
 
     /* ⑥ 문의 */
@@ -390,7 +391,7 @@
             <strong>Dong-soo Ban</strong>
             <span class="case-desc">For more than 20 years I have worked across web, media and ad tech. At BlueM Partners I use that experience to connect new ad media and technology with the companies that need them.</span>
             <ul>
-              <li>Founded and ran a web agency (2003–2012)</li>
+              <li>Founded and ran a web agency <span class="nowrap">(2003–2012)</span></li>
               <li>Led an online video platform business and a Google Ad Manager 360 partner business</li>
               <li>Partnerships with cloud companies, including AWS and Bespin Global</li>
               <li>Co-led the kids' OTT service Pororo TV and distributed Korean animation IP to major video platforms in China</li>

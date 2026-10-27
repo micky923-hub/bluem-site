@@ -11,4 +11,5 @@ bluem-partners.com 회사 소개 사이트. **공개 저장소**다.
 * 문의 양식은 Web3Forms로 contact@bluem-partners.com에 전달한다. 받는 항목·보관 기간·위탁 업체를 바꾸면 `privacy/`와 양식의 동의 문구를 함께 고친다.
 * 쿠키·방문자 분석 등 추적 도구를 넣으면 개인정보처리방침에 먼저 반영한다.
 * 색: 네이비 `#0C2340`, 블루 `#307FE2`, 라이트블루 `#71B0E8`. 글꼴: Pretendard.
+* 야간 모드: 방문자 기기 설정(`prefers-color-scheme`)을 자동으로 따른다(전환 버튼 없음). 색은 변수로만 쓴다. 글자색 네이비는 `--title`, 흰 카드 바탕은 `--card`. 야간 색은 각 페이지 `:root`와 `assets/sub.css`의 `@media (prefers-color-scheme: dark)`에서 정한다. 새 요소를 만들 때 `#fff`·`var(--navy)` 글자색을 직접 쓰지 않는다.
 * 작업 브랜치에서 고치고, 대표가 "머지해줘"라고 하면 PR을 만들어 `main`에 머지한다.

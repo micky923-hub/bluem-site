@@ -8,7 +8,33 @@
   --line: #E3E8F0;
   --paper: #FFFFFF;
   --soft: #F4F7FB;
+  --card: #FFFFFF;
+  --field-line: #CBD3DF;
+  --title: var(--navy);
+  --tint: #F1F6FE;
+  --tint2: #E8F1FD;
   --danger: #C62828;
+  --notice-bg: #FFF6E5;
+  --notice-ink: #7A4B00;
+  color-scheme: light dark;
+}
+/* 야간 모드: 방문자 기기가 다크 모드면 자동으로 바뀐다 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0A1424;
+    --soft: #0F1C30;
+    --card: #13233A;
+    --line: #24364F;
+    --field-line: #34496A;
+    --ink: #E4EAF3;
+    --muted: #A2AFC2;
+    --title: #F3F6FB;
+    --tint: #16304F;
+    --tint2: #1A3558;
+    --danger: #FF8A80;
+    --notice-bg: #3A2E12;
+    --notice-ink: #F5D79A;
+  }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -40,13 +66,13 @@ main { padding: 44px 0 72px; }
 .field { margin-bottom: 24px; border: 0; padding: 0; min-width: 0; }
 .field > label, .field > legend {
   display: block; margin-bottom: 8px; padding: 0;
-  font-weight: 700; color: var(--navy); font-size: 16px;
+  font-weight: 700; color: var(--title); font-size: 16px;
 }
 .req { color: var(--blue); margin-left: 2px; }
 .opt-tag { color: var(--muted); font-weight: 500; font-size: 14px; margin-left: 4px; }
 input[type="text"], input[type="email"], input[type="tel"], textarea {
   width: 100%; min-height: 50px; padding: 12px 14px;
-  border: 1px solid #CBD3DF; border-radius: 12px; background: #fff;
+  border: 1px solid var(--field-line); border-radius: 12px; background: var(--card);
   font: inherit; font-size: 16px; color: var(--ink);
 }
 textarea { min-height: 160px; resize: vertical; line-height: 1.6; }
@@ -56,17 +82,17 @@ input:focus, textarea:focus { outline: none; border-color: var(--blue); box-shad
 .choice {
   display: flex; align-items: center; gap: 10px;
   min-height: 48px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px;
-  cursor: pointer; background: #fff;
+  cursor: pointer; background: var(--card);
 }
-.choice:has(input:checked) { border-color: var(--blue); background: #F1F6FE; }
+.choice:has(input:checked) { border-color: var(--blue); background: var(--tint); }
 .choice input { width: 18px; height: 18px; accent-color: var(--blue); flex: none; margin: 0; }
 .etc-input { margin-top: 10px; }
 
 .consent { background: var(--soft); border-radius: 14px; padding: 18px; margin: 32px 0 24px; }
-.consent h2 { margin: 0 0 10px; font-size: 16px; color: var(--navy); }
+.consent h2 { margin: 0 0 10px; font-size: 16px; color: var(--title); }
 .consent ul { margin: 0 0 12px; padding-left: 18px; color: var(--muted); font-size: 15px; }
 .consent li { margin: 2px 0; }
-.consent .agree { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--navy); cursor: pointer; }
+.consent .agree { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--title); cursor: pointer; }
 .consent .agree input { width: 20px; height: 20px; accent-color: var(--blue); margin: 0; }
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
@@ -86,25 +112,25 @@ input:focus, textarea:focus { outline: none; border-color: var(--blue); box-shad
 .form-msg.error { color: var(--danger); }
 .notice {
   margin-bottom: 28px; padding: 14px 16px; border-radius: 12px;
-  background: #FFF6E5; color: #7A4B00; font-size: 15px;
+  background: var(--notice-bg); color: var(--notice-ink); font-size: 15px;
 }
 .alt { margin-top: 28px; color: var(--muted); font-size: 15px; text-align: center; }
 
 .done { text-align: center; padding: 40px 0 20px; }
 .done .check {
   display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 18px;
-  border-radius: 50%; background: #E8F1FD; color: var(--blue); font-size: 30px; font-weight: 800;
+  border-radius: 50%; background: var(--tint2); color: var(--blue); font-size: 30px; font-weight: 800;
 }
-.done h2 { margin: 0 0 10px; color: var(--navy); font-size: 24px; }
+.done h2 { margin: 0 0 10px; color: var(--title); font-size: 24px; }
 .done p { margin: 0 0 28px; color: var(--muted); }
 
 /* 처리방침 본문 */
-.policy h2 { margin: 36px 0 10px; font-size: 19px; color: var(--navy); letter-spacing: -0.02em; }
+.policy h2 { margin: 36px 0 10px; font-size: 19px; color: var(--title); letter-spacing: -0.02em; }
 .policy p, .policy li { color: var(--ink); }
 .policy ul, .policy ol { padding-left: 20px; }
 .policy table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
 .policy th, .policy td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
-.policy th { background: var(--soft); color: var(--navy); width: 34%; }
+.policy th { background: var(--soft); color: var(--title); width: 34%; }
 .policy .meta { color: var(--muted); font-size: 15px; }
 
 /* 바닥글 */

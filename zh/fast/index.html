@@ -29,7 +29,7 @@
     /* FAST 광고 페이지 전용 (공통은 /assets/sub.css) */
     body { word-break: normal; line-break: strict; } /* 일본어·중국어는 띄어쓰기가 없어 keep-all이면 줄이 안 바뀐다 */
     .fast section { margin: 0 0 60px; }
-    .fast h2 { margin: 0 0 14px; font-size: 24px; color: var(--navy); letter-spacing: -0.02em; text-wrap: balance; }
+    .fast h2 { margin: 0 0 14px; font-size: 24px; color: var(--title); letter-spacing: -0.02em; text-wrap: balance; }
     .fast .intro { margin: 0 0 24px; font-size: 17px; }
     .stats { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 0; }
     @media (min-width: 600px) { .stats { grid-template-columns: repeat(3, 1fr); } }
@@ -39,18 +39,18 @@
     .src { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
     .roles { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
     .roles li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
-    .roles b { display: block; color: var(--navy); font-size: 18px; margin-bottom: 4px; }
+    .roles b { display: block; color: var(--title); font-size: 18px; margin-bottom: 4px; }
     .roles p { margin: 0; color: var(--muted); }
     .products { display: grid; gap: 16px; }
     .product { border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; }
     .product .tag { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
-    .product h3 { margin: 4px 0 8px; font-size: 20px; color: var(--navy); letter-spacing: -0.02em; }
+    .product h3 { margin: 4px 0 8px; font-size: 20px; color: var(--title); letter-spacing: -0.02em; }
     .product p { margin: 0 0 12px; }
     .product ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
     .price-note { margin: 14px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; }
     .cases { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
     .cases li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
-    .cases b { color: var(--navy); }
+    .cases b { color: var(--title); }
     .steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
     .steps li { counter-increment: s; display: flex; gap: 12px; align-items: baseline; }
     .steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; }
@@ -61,6 +61,10 @@
     .cta .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.45); }
     .cta .addr { color: #D5DEEB; font-size: 15px; }
     .back { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+    @media (prefers-color-scheme: dark) {
+      .cta { background: var(--card); border: 1px solid var(--line); }
+      .steps li::before { background: var(--blue); }
+    }
   </style>
 </head>
 <body>

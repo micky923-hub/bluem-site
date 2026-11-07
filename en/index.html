@@ -46,6 +46,7 @@
       --card: #FFFFFF;
       --field-line: #CBD3DF;
       --title: var(--navy);
+      --ill-bg: #E8F1FD;
       --max: 1040px;
       color-scheme: light dark;
     }
@@ -60,6 +61,7 @@
         --ink: #E4EAF3;
         --muted: #A2AFC2;
         --title: #F3F6FB;
+        --ill-bg: #1A3558;
       }
     }
     * { box-sizing: border-box; }
@@ -208,6 +210,7 @@
       display: flex; gap: 20px; align-items: flex-start;
       padding: 28px 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--card);
     }
+    .person .portrait { flex: none; width: 96px; height: 96px; }
     .person ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; }
     .person li { font-size: 16px; color: var(--ink); }
     .nowrap { white-space: nowrap; }
@@ -411,7 +414,25 @@
         <p class="label reveal">People</p>
         <h2 class="reveal">Who you'll work with</h2>
         <div class="person reveal">
-          <span class="case-mark"><svg viewBox="0 0 2000 1536" width="36" aria-hidden="true"><rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/><rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/><rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/><rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/><rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/></svg></span>
+          <svg class="portrait" viewBox="0 0 120 120" width="96" height="96" role="img" aria-label="Illustration of the CEO">
+            <rect width="120" height="120" rx="26" fill="var(--ill-bg)"/>
+            <g stroke="#14213A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 121 C16 101 29 93 47 90 L60 104 L73 90 C91 93 104 101 106 121 Z" fill="#0C2340"/>
+              <path d="M51 89 L60 108 L69 89 Z" fill="#FFFFFF"/>
+              <path d="M60 99 L56.5 110 L60 116 L63.5 110 Z" fill="#307FE2" stroke-width="1.6"/>
+              <path d="M51 89 L55 99 L60 95 L65 99 L69 89" fill="#FFFFFF" stroke-width="1.8"/>
+              <path d="M47 90 L57 112 M73 90 L63 112" fill="none" stroke="#3A5C8C" stroke-width="2"/>
+              <path d="M53 76 L53 90 L67 90 L67 76" fill="#F9DEC9"/>
+              <path d="M39.5 58 C35.5 57 35 65 40.5 67 M80.5 58 C84.5 57 85 65 79.5 67" fill="#F9DEC9"/>
+              <path d="M39.5 54 C39.5 40 48 33 60 33 C72 33 80.5 40 80.5 54 C80.5 70 72 81 60 81 C48 81 39.5 70 39.5 54 Z" fill="#F9DEC9"/>
+              <path d="M38.5 58 C35 40 44 28 60 28 C76 28 85 38 81.5 58 C80 50 78 46 74 43 C64 46 52 44 46 38 C44 44 40 49 38.5 58 Z" fill="#1F2A3D"/>
+              <path d="M53 68.5 C57 71.5 63 71.5 67 68.5" fill="none" stroke-width="2"/>
+              <path d="M47.5 51.5 C49.5 50 53 50 55.5 51 M64.5 51 C67 50 70.5 50 72.5 51.5" fill="none" stroke-width="2.4"/>
+              <path d="M60 58 L58.5 63.5 L61 64" fill="none" stroke-width="1.6" stroke="#C9A58C"/>
+            </g>
+            <circle cx="51.5" cy="57.5" r="2.1" fill="#14213A"/>
+            <circle cx="68.5" cy="57.5" r="2.1" fill="#14213A"/>
+          </svg>
           <div class="case-body">
             <span class="case-tag">Founder</span>
             <strong>Dong-soo Ban</strong>

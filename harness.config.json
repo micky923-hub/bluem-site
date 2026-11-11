@@ -1,0 +1,10 @@
+{
+  "harnessType": "homepage",
+  "siteDir": ".",
+  "buildCommand": "",
+  "branches": ["main"],
+  "launched": true,
+  "languages": { "ko": "", "en": "en", "ja": "ja", "zh": "zh" },
+  "pages": ["", "fast"],
+  "devices": ["mobile", "desktop"]
+}

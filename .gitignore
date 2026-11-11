@@ -1,0 +1,4 @@
+
+# 블루엠 하네스: 자료 받는 곳 (README만 올림)
+_workspace/*
+!_workspace/README.md

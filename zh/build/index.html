@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网站与服务建设 | BlueM Partners</title>
+  <meta name="description" content="BlueM Partners 承接从企业官网到博客、社区等网络服务的策划、设计、开发、上线与运营。">
+  <link rel="canonical" href="https://bluem-partners.com/zh/build/">
+  <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/build/">
+  <link rel="alternate" hreflang="en" href="https://bluem-partners.com/en/build/">
+  <link rel="alternate" hreflang="ja" href="https://bluem-partners.com/ja/build/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bluem-partners.com/zh/build/">
+  <link rel="alternate" hreflang="x-default" href="https://bluem-partners.com/build/">
+  <meta name="theme-color" content="#0C2340">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bluem-partners.com/zh/build/">
+  <meta property="og:title" content="网站与服务建设 | BlueM Partners">
+  <meta property="og:description" content="BlueM Partners 承接从企业官网到博客、社区等网络服务的策划、设计、开发、上线与运营。">
+  <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/sub.css">
+  <style>
+    /* 홈페이지·서비스 구축 페이지 전용 (공통은 /assets/sub.css) */
+    body { word-break: normal; line-break: strict; } /* 일본어·중국어는 띄어쓰기가 없어 keep-all이면 줄이 안 바뀐다 */
+    .fast section { margin: 0 0 60px; }
+    .fast h2 { margin: 0 0 14px; font-size: 24px; color: var(--title); letter-spacing: -0.02em; text-wrap: balance; }
+    .fast .intro { margin: 0 0 24px; font-size: 17px; }
+    .stats { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 0; }
+    @media (min-width: 600px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+    .stat { background: var(--soft); border-radius: 14px; padding: 18px; }
+    .stat strong { display: block; font-size: 26px; color: var(--blue); letter-spacing: -0.02em; line-height: 1.3; }
+    .stat span { color: var(--ink); font-size: 15px; }
+    .src { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+    .roles { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .roles li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .roles b { display: block; color: var(--title); font-size: 18px; margin-bottom: 4px; }
+    .roles p { margin: 0; color: var(--muted); }
+    .products { display: grid; gap: 16px; }
+    .product { border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; }
+    .product .tag { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .product h3 { margin: 4px 0 8px; font-size: 20px; color: var(--title); letter-spacing: -0.02em; }
+    .product p { margin: 0 0 12px; }
+    .product ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
+    .price-note { margin: 14px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; }
+    .cases { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .cases li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .cases b { color: var(--title); }
+    .steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+    .steps li { counter-increment: s; display: flex; gap: 12px; align-items: baseline; }
+    .steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; }
+    .cta { background: var(--navy); color: #fff; border-radius: 18px; padding: 28px 24px; }
+    .cta h2 { color: #fff; }
+    .cta p { color: #D5DEEB; margin: 0 0 20px; }
+    .cta .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .cta .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.45); }
+    .cta .addr { color: #D5DEEB; font-size: 15px; }
+    .back { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+    @media (prefers-color-scheme: dark) {
+      .cta { background: var(--card); border: 1px solid var(--line); }
+      .steps li::before { background: var(--blue); }
+    }
+    .steps.flow li { align-items: flex-start; }
+    .steps.flow li::before { margin-top: 1px; }
+    .steps.flow b { display: block; color: var(--title); }
+    .steps.flow span { display: block; color: var(--muted); font-size: 15px; }
+    .case-link { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .case-link b { color: var(--title); }
+    .case-link a { display: inline-block; margin-top: 4px; color: var(--blue); font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/zh/" aria-label="BlueM Partners 首页">
+        <svg viewBox="0 0 2000 1536" aria-hidden="true">
+          <rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+          <rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/>
+          <rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+        </svg>
+        BlueM Partners
+      </a>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap">
+      <h1>网站与服务建设</h1>
+      <p>从企业官网到博客、社区等网络服务，我们一站式负责策划、设计、开发、上线与运营。</p>
+    </div>
+  </section>
+
+  <main class="fast">
+    <div class="wrap">
+      <section>
+        <h2>我们可以建设</h2>
+        <p class="intro">即使从小规模起步，也能稳定运营。默认支持手机端与多语言，并考虑上线后的运营。</p>
+        <div class="products">
+          <article class="product"><span class="tag">Homepage</span><h3>企业・品牌官网</h3><p>介绍公司、服务并提供咨询入口的官网。</p><ul><li>韩语、英语、日语、中文等多语言</li><li>手机・电脑适配，深色模式</li><li>咨询表单与隐私政策</li><li>搜索引擎收录准备</li></ul></article>
+          <article class="product"><span class="tag">Content Service</span><h3>内容・博客服务</h3><p>持续发布信息、通过搜索获得访客的服务。</p><ul><li>内容策划与发布流程</li><li>提升搜索曝光</li><li>广告・联盟收益模式</li></ul></article>
+          <article class="product"><span class="tag">Community</span><h3>社区网站</h3><p>会员发帖交流的空间。</p><ul><li>会员注册・登录</li><li>论坛・评论</li><li>管理后台与运营规则</li></ul></article>
+          <article class="product"><span class="tag">Care</span><h3>运营・维护</h3><p>上线后继续负责网站管理。</p><ul><li>内容修改与新增页面</li><li>定期检查</li><li>访问・运营报告</li></ul></article>
+        </div>
+        <p class="case-link"><b>运营案例</b> · 也有像 Financial Diary 这样由 BlueM Partners 自行策划、开发和运营的服务。<br><a href="/zh/#work">查看运营案例 →</a></p>
+      </section>
+
+      <section>
+        <h2>工作方式</h2>
+        <ul class="roles">
+          <li><b>通过预览共同确认</b><p>每次修改都会生成预览链接，可直接在手机上查看并提出意见。</p></li>
+          <li><b>按语言・设备检查画面</b><p>对每种语言在手机和电脑上截图，检查文字溢出和错位。</p></li>
+          <li><b>发布前自动检查</b><p>检查敏感信息、失效链接和必要信息，通过后才发布。</p></li>
+          <li><b>兼顾运营成本</b><p>根据网站特点建议合适的托管与运营方式，减少不必要的费用。</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>项目流程</h2>
+        <ol class="steps flow"><li><div><b>咨询</b><span>想建设的服务、参考网站和期望时间</span></div></li><li><div><b>整理需求</b><span>页面、语言、功能，域名与素材准备</span></div></li><li><div><b>报价・方案</b><span>范围、日程与费用方案</span></div></li><li><div><b>签约</b><span>确定范围、验收期和修改次数</span></div></li><li><div><b>策划・设计</b><span>页面结构与设计稿</span></div></li><li><div><b>开发・验收</b><span>在预览链接上确认并修改</span></div></li><li><div><b>上线</b><span>连接域名，准备搜索引擎收录</span></div></li><li><div><b>运营・维护</b><span>上线后的修改与检查</span></div></li></ol>
+        <p class="price-note">费用因范围、页面数量和功能而异，咨询后提供报价。</p>
+      </section>
+
+      <section class="cta">
+        <h2>有想建设的服务吗？</h2>
+        <p>请告诉我们想建设的服务、参考网站和期望上线日期，我们会整理范围和日程并提出方案。可使用韩语或英语沟通。</p>
+        <div class="actions">
+            <a class="btn" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20%26%20Service%20Development%5D">发送邮件</a>
+            <span class="addr">contact@bluem-partners.com</span>
+        </div>
+      </section>
+
+      <a class="back" href="/zh/">← BlueM Partners 首页</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year">2026</span> BlueM Partners</span>
+      <span style="display:inline-flex;gap:20px;align-items:center"><a href="/privacy/">隐私政策（韩语）</a> <a class="yt" href="https://www.youtube.com/@bluem-partners" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>YouTube</span></a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

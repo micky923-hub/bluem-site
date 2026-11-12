@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="BlueM Partners">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="ブルーエムパートナーズ BlueM Partners | 信頼できるビジネスパートナー">
-  <meta property="og:description" content="新しい広告メディアとテクノロジープロジェクトを、それを必要とする企業とつなぎます。">
+  <meta property="og:description" content="屋外広告を中心とした広告メディアと、ホームページ・サービス構築を、それを必要とする企業とつなぎます。">
   <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -138,6 +138,9 @@
     }
     .btn:hover { background: #2A6FC8; transform: translateY(-1px); }
     .btn:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn.line { background: transparent; border: 1px solid rgba(255,255,255,.45); }
+    .btn.line:hover { background: rgba(255,255,255,.08); border-color: #fff; }
     .btn.ghost { background: var(--card); color: var(--title); border: 1px solid var(--field-line); }
     .btn.ghost:hover { background: var(--card); border-color: var(--blue); color: var(--blue); }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
@@ -327,8 +330,11 @@
       <div class="wrap">
         <p class="eyebrow">Media &amp; Technology Sales House · Korea</p>
         <h1>信頼できる<br><span style="white-space:nowrap">ビジネスパートナー。</span></h1>
-        <p class="lead">BlueM Partnersは、新しい広告メディアとテクノロジープロジェクトを、それを必要とする企業とつなぐ韓国のセールスハウスです。</p>
-        <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20Inquiry%5D">お問い合わせ <span aria-hidden="true">→</span></a>
+        <p class="lead">BlueM Partnersは、屋外広告を中心とした広告メディアと、ホームページ・サービス構築を、それを必要とする企業とつなぐ韓国のセールスハウスです。</p>
+        <div class="hero-actions">
+          <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20Inquiry%5D">お問い合わせ <span aria-hidden="true">→</span></a>
+          <a class="btn line" href="/ja/ooh/">屋外広告を見る</a>
+        </div>
       </div>
     </section>
 
@@ -358,8 +364,9 @@
           </article>
           <article class="card reveal">
             <span class="bar" style="background: var(--blue)"></span>
-            <h3>テクノロジープロジェクト</h3>
-            <p>ソフトウェア開発やシステム構築が必要な企業と、それを実現できる開発パートナーをおつなぎします。</p>
+            <h3>ホームページ・サービス構築</h3>
+            <p>会社のホームページからブログ・コミュニティなどのWebサービスまで、企画・開発・公開・運営をお引き受けします。</p>
+            <a class="more" href="/ja/build/">構築の流れを見る <span aria-hidden="true">→</span></a>
           </article>
           <article class="card reveal">
             <span class="bar" style="background: var(--sky)"></span>

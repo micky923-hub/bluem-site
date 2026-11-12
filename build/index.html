@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>홈페이지·서비스 구축 | 블루엠파트너스 BlueM Partners</title>
+  <meta name="description" content="블루엠파트너스는 회사 홈페이지부터 블로그·커뮤니티 같은 웹 서비스까지 기획·디자인·개발·오픈·운영을 맡아 진행합니다. 다국어, 휴대폰 화면, 배포 전 자동 검사를 기본으로 합니다.">
+  <link rel="canonical" href="https://bluem-partners.com/build/">
+  <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/build/">
+  <link rel="alternate" hreflang="en" href="https://bluem-partners.com/en/build/">
+  <link rel="alternate" hreflang="ja" href="https://bluem-partners.com/ja/build/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bluem-partners.com/zh/build/">
+  <link rel="alternate" hreflang="x-default" href="https://bluem-partners.com/build/">
+  <meta name="theme-color" content="#0C2340">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bluem-partners.com/build/">
+  <meta property="og:title" content="홈페이지·서비스 구축 | 블루엠파트너스 BlueM Partners">
+  <meta property="og:description" content="블루엠파트너스는 회사 홈페이지부터 블로그·커뮤니티 같은 웹 서비스까지 기획·디자인·개발·오픈·운영을 맡아 진행합니다. 다국어, 휴대폰 화면, 배포 전 자동 검사를 기본으로 합니다.">
+  <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/sub.css">
+  <style>
+    /* 홈페이지·서비스 구축 페이지 전용 (공통은 /assets/sub.css) */
+    .fast section { margin: 0 0 60px; }
+    .fast h2 { margin: 0 0 14px; font-size: 24px; color: var(--title); letter-spacing: -0.02em; text-wrap: balance; }
+    .fast .intro { margin: 0 0 24px; font-size: 17px; }
+    .stats { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 0; }
+    @media (min-width: 600px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+    .stat { background: var(--soft); border-radius: 14px; padding: 18px; }
+    .stat strong { display: block; font-size: 26px; color: var(--blue); letter-spacing: -0.02em; line-height: 1.3; }
+    .stat span { color: var(--ink); font-size: 15px; }
+    .src { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+    .roles { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .roles li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .roles b { display: block; color: var(--title); font-size: 18px; margin-bottom: 4px; }
+    .roles p { margin: 0; color: var(--muted); }
+    .products { display: grid; gap: 16px; }
+    .product { border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; }
+    .product .tag { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .product h3 { margin: 4px 0 8px; font-size: 20px; color: var(--title); letter-spacing: -0.02em; }
+    .product p { margin: 0 0 12px; }
+    .product ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
+    .price-note { margin: 14px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; }
+    .cases { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .cases li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .cases b { color: var(--title); }
+    .steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+    .steps li { counter-increment: s; display: flex; gap: 12px; align-items: baseline; }
+    .steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; }
+    .cta { background: var(--navy); color: #fff; border-radius: 18px; padding: 28px 24px; }
+    .cta h2 { color: #fff; }
+    .cta p { color: #D5DEEB; margin: 0 0 20px; }
+    .cta .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .cta .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.45); }
+    .cta .addr { color: #D5DEEB; font-size: 15px; }
+    .back { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+    @media (prefers-color-scheme: dark) {
+      .cta { background: var(--card); border: 1px solid var(--line); }
+      .steps li::before { background: var(--blue); }
+    }
+    .steps.flow li { align-items: flex-start; }
+    .steps.flow li::before { margin-top: 1px; }
+    .steps.flow b { display: block; color: var(--title); }
+    .steps.flow span { display: block; color: var(--muted); font-size: 15px; }
+    .case-link { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .case-link b { color: var(--title); }
+    .case-link a { display: inline-block; margin-top: 4px; color: var(--blue); font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="블루엠파트너스 홈">
+        <svg viewBox="0 0 2000 1536" aria-hidden="true">
+          <rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+          <rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/>
+          <rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+        </svg>
+        BlueM Partners
+      </a>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap">
+      <h1>홈페이지·서비스 구축</h1>
+      <p>회사 홈페이지부터 블로그·커뮤니티 같은 웹 서비스까지, 기획·디자인·개발·오픈·운영을 한 번에 맡아 진행합니다.</p>
+    </div>
+  </section>
+
+  <main class="fast">
+    <div class="wrap">
+      <section>
+        <h2>이런 것을 만듭니다</h2>
+        <p class="intro">작게 시작해도 제대로 운영할 수 있게 만듭니다. 휴대폰 화면과 여러 언어를 기본으로 하고, 오픈한 뒤의 운영까지 함께 생각합니다.</p>
+        <div class="products">
+          <article class="product"><span class="tag">Homepage</span><h3>회사·브랜드 홈페이지</h3><p>회사 소개, 서비스 안내, 문의를 담은 홈페이지입니다.</p><ul><li>한국어·영어·일본어·중국어 등 다국어</li><li>휴대폰·PC 화면 대응, 야간 모드</li><li>문의 양식과 개인정보처리방침</li><li>검색엔진 등록 준비</li></ul></article>
+          <article class="product"><span class="tag">Content Service</span><h3>콘텐츠·블로그 서비스</h3><p>정보를 꾸준히 발행하고 검색으로 방문자를 모으는 서비스입니다.</p><ul><li>콘텐츠 기획과 발행 구조</li><li>검색 노출 개선</li><li>광고·제휴 수익 구조</li></ul></article>
+          <article class="product"><span class="tag">Community</span><h3>커뮤니티 사이트</h3><p>회원이 글을 쓰고 소통하는 공간입니다.</p><ul><li>회원 가입·로그인</li><li>게시판·댓글</li><li>관리자 화면과 운영 정책</li></ul></article>
+          <article class="product"><span class="tag">Care</span><h3>운영·유지보수</h3><p>오픈한 뒤에도 사이트를 맡아 관리합니다.</p><ul><li>내용 수정과 페이지 추가</li><li>정기 점검</li><li>방문·운영 리포트</li></ul></article>
+        </div>
+        <p class="case-link"><b>운영 사례</b> · Financial Diary처럼 블루엠파트너스가 직접 기획·개발·운영하는 서비스도 있습니다.<br><a href="/#work">운영 사례 보기 →</a></p>
+      </section>
+
+      <section>
+        <h2>일하는 방식</h2>
+        <ul class="roles">
+          <li><b>미리보기로 함께 확인</b><p>작업할 때마다 검수용 주소가 생겨 휴대폰으로 바로 보고 의견을 주실 수 있습니다.</p></li>
+          <li><b>언어·기기별 화면 검사</b><p>모든 언어와 휴대폰·PC 화면을 찍어 글자 넘침과 깨짐을 확인합니다.</p></li>
+          <li><b>배포 전 자동 검사</b><p>비밀 정보, 깨진 링크, 필수 정보를 검사해 통과해야 사이트에 반영합니다.</p></li>
+          <li><b>운영 비용까지 고려</b><p>사이트 성격에 맞춰 호스팅과 운영 방식을 제안해 불필요한 비용을 줄입니다.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>진행 과정</h2>
+        <ol class="steps flow"><li><div><b>문의</b><span>만들고 싶은 서비스, 참고 사이트, 원하는 일정</span></div></li><li><div><b>요구사항 정리</b><span>페이지·언어·기능, 도메인과 자료 준비 확인</span></div></li><li><div><b>견적·제안</b><span>범위·일정·금액 제안</span></div></li><li><div><b>계약</b><span>범위, 검수 기간, 수정 횟수 확정</span></div></li><li><div><b>기획·디자인</b><span>화면 구성과 디자인 시안</span></div></li><li><div><b>개발·검수</b><span>검수용 주소에서 확인하며 수정</span></div></li><li><div><b>오픈</b><span>도메인 연결, 검색엔진 등록 준비</span></div></li><li><div><b>운영·유지보수</b><span>오픈 후 수정과 점검</span></div></li></ol>
+        <p class="price-note">비용은 범위·페이지 수·기능에 따라 달라 상담 후 견적으로 안내드립니다.</p>
+      </section>
+
+      <section class="cta">
+        <h2>만들고 싶은 서비스가 있나요?</h2>
+        <p>만들고 싶은 서비스와 참고 사이트, 원하는 오픈 날짜를 알려 주시면 범위와 일정을 정리해 제안드립니다.</p>
+        <div class="actions">
+            <a class="btn" href="/contact/">문의하기 <span aria-hidden="true">→</span></a>
+            <a class="btn ghost" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%C2%B7%EC%84%9C%EB%B9%84%EC%8A%A4%20%EA%B5%AC%EC%B6%95%20%EB%AC%B8%EC%9D%98%5D">메일 보내기</a>
+            <span class="addr">contact@bluem-partners.com</span>
+        </div>
+      </section>
+
+      <a class="back" href="/">← 블루엠파트너스 홈</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year">2026</span> 블루엠파트너스 BlueM Partners</span>
+      <span style="display:inline-flex;gap:20px;align-items:center"><a href="/privacy/">개인정보처리방침</a> <a class="yt" href="https://www.youtube.com/@bluem-partners" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>YouTube</span></a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -5,6 +5,6 @@
   "branches": ["main"],
   "launched": true,
   "languages": { "ko": "", "en": "en", "ja": "ja", "zh": "zh" },
-  "pages": ["", "ooh", "fast"],
+  "pages": ["", "ooh", "build", "fast"],
   "devices": ["mobile", "desktop"]
 }

@@ -13,7 +13,7 @@ bluem-partners.com 회사 소개 사이트. **공개 저장소**다.
 * 옥외광고(`ooh/`): 매체사·영업대행 파트너 이름, 단가, 다른 광고주 집행 데이터, 매체 사진은 넣지 않는다. 매체는 종류·지역으로만 소개한다. 이름 공개는 계약 후 대표가 허락하면 바꾼다.
 * 공개 연락처는 `contact@bluem-partners.com`만 쓴다.
 * 실적·숫자는 근거가 있는 것만, 과장 표현("최고", "업계 1위", "100% 보장")은 쓰지 않는다.
-* 빌드 도구 없이 정적 HTML로 유지한다. 페이지: `index.html`(소개), `contact/`(문의 양식), `privacy/`(개인정보처리방침), `404.html`(없는 주소 안내), `ooh/`·`en/ooh/`·`ja/ooh/`·`zh/ooh/`(옥외광고 소개, 주력 사업), `fast/`·`en/fast/`·`ja/fast/`·`zh/fast/`(K20 FAST 광고 소개), `en/`·`ja/`·`zh/`(영문·일본어·중국어 간체 소개, 문의는 메일 중심, 답변은 한국어·영어). 소개 문구를 바꾸면 네 언어를 함께 고친다. 하위 페이지 공통 스타일은 `assets/sub.css`.
+* 빌드 도구 없이 정적 HTML로 유지한다. 페이지: `index.html`(소개), `contact/`(문의 양식), `privacy/`(개인정보처리방침), `404.html`(없는 주소 안내), `ooh/`·`en/ooh/`·`ja/ooh/`·`zh/ooh/`(옥외광고 소개, 주력 사업), `build/`·`en/build/`·`ja/build/`·`zh/build/`(홈페이지·서비스 구축 소개. 고객사 이름·서비스명은 넣지 않는다), `fast/`·`en/fast/`·`ja/fast/`·`zh/fast/`(K20 FAST 광고 소개), `en/`·`ja/`·`zh/`(영문·일본어·중국어 간체 소개, 문의는 메일 중심, 답변은 한국어·영어). 소개 문구를 바꾸면 네 언어를 함께 고친다. 하위 페이지 공통 스타일은 `assets/sub.css`.
 * 공식 채널: 유튜브 `https://www.youtube.com/@bluem-partners` (바닥글 링크, 구조화 데이터 sameAs).
 * 문의 양식은 Web3Forms로 contact@bluem-partners.com에 전달한다. 받는 항목·보관 기간·위탁 업체를 바꾸면 `privacy/`와 양식의 동의 문구를 함께 고친다.
 * 쿠키·방문자 분석 등 추적 도구를 넣으면 개인정보처리방침에 먼저 반영한다.

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website &amp; Service Development | BlueM Partners</title>
+  <meta name="description" content="BlueM Partners plans, designs, builds, launches and runs websites and web services, from company sites to blogs and communities. Multilingual, mobile-first and checked automatically before every release.">
+  <link rel="canonical" href="https://bluem-partners.com/en/build/">
+  <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/build/">
+  <link rel="alternate" hreflang="en" href="https://bluem-partners.com/en/build/">
+  <link rel="alternate" hreflang="ja" href="https://bluem-partners.com/ja/build/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bluem-partners.com/zh/build/">
+  <link rel="alternate" hreflang="x-default" href="https://bluem-partners.com/build/">
+  <meta name="theme-color" content="#0C2340">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bluem-partners.com/en/build/">
+  <meta property="og:title" content="Website &amp; Service Development | BlueM Partners">
+  <meta property="og:description" content="BlueM Partners plans, designs, builds, launches and runs websites and web services, from company sites to blogs and communities. Multilingual, mobile-first and checked automatically before every release.">
+  <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/sub.css">
+  <style>
+    /* 홈페이지·서비스 구축 페이지 전용 (공통은 /assets/sub.css) */
+    .fast section { margin: 0 0 60px; }
+    .fast h2 { margin: 0 0 14px; font-size: 24px; color: var(--title); letter-spacing: -0.02em; text-wrap: balance; }
+    .fast .intro { margin: 0 0 24px; font-size: 17px; }
+    .stats { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 0; }
+    @media (min-width: 600px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+    .stat { background: var(--soft); border-radius: 14px; padding: 18px; }
+    .stat strong { display: block; font-size: 26px; color: var(--blue); letter-spacing: -0.02em; line-height: 1.3; }
+    .stat span { color: var(--ink); font-size: 15px; }
+    .src { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+    .roles { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .roles li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .roles b { display: block; color: var(--title); font-size: 18px; margin-bottom: 4px; }
+    .roles p { margin: 0; color: var(--muted); }
+    .products { display: grid; gap: 16px; }
+    .product { border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; }
+    .product .tag { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .product h3 { margin: 4px 0 8px; font-size: 20px; color: var(--title); letter-spacing: -0.02em; }
+    .product p { margin: 0 0 12px; }
+    .product ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
+    .price-note { margin: 14px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; }
+    .cases { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .cases li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .cases b { color: var(--title); }
+    .steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+    .steps li { counter-increment: s; display: flex; gap: 12px; align-items: baseline; }
+    .steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; }
+    .cta { background: var(--navy); color: #fff; border-radius: 18px; padding: 28px 24px; }
+    .cta h2 { color: #fff; }
+    .cta p { color: #D5DEEB; margin: 0 0 20px; }
+    .cta .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .cta .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.45); }
+    .cta .addr { color: #D5DEEB; font-size: 15px; }
+    .back { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+    @media (prefers-color-scheme: dark) {
+      .cta { background: var(--card); border: 1px solid var(--line); }
+      .steps li::before { background: var(--blue); }
+    }
+    .steps.flow li { align-items: flex-start; }
+    .steps.flow li::before { margin-top: 1px; }
+    .steps.flow b { display: block; color: var(--title); }
+    .steps.flow span { display: block; color: var(--muted); font-size: 15px; }
+    .case-link { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .case-link b { color: var(--title); }
+    .case-link a { display: inline-block; margin-top: 4px; color: var(--blue); font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/en/" aria-label="BlueM Partners home">
+        <svg viewBox="0 0 2000 1536" aria-hidden="true">
+          <rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+          <rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/>
+          <rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+        </svg>
+        BlueM Partners
+      </a>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap">
+      <h1>Website &amp; Service Development</h1>
+      <p>From company websites to web services such as blogs and online communities, we take care of planning, design, development, launch and operation.</p>
+    </div>
+  </section>
+
+  <main class="fast">
+    <div class="wrap">
+      <section>
+        <h2>What we build</h2>
+        <p class="intro">We build sites that start small but run properly. Mobile screens and multiple languages come as standard, and we plan for life after launch.</p>
+        <div class="products">
+          <article class="product"><span class="tag">Homepage</span><h3>Company and brand websites</h3><p>Websites that present your company, services and a way to get in touch.</p><ul><li>Multilingual: Korean, English, Japanese, Chinese and more</li><li>Mobile and desktop layouts, dark mode</li><li>Contact form and privacy policy</li><li>Ready for search engine registration</li></ul></article>
+          <article class="product"><span class="tag">Content Service</span><h3>Content and blog services</h3><p>Services that publish useful content regularly and grow through search.</p><ul><li>Content planning and publishing workflow</li><li>Search visibility improvements</li><li>Advertising and affiliate revenue models</li></ul></article>
+          <article class="product"><span class="tag">Community</span><h3>Community sites</h3><p>Spaces where members post and talk with each other.</p><ul><li>Sign-up and login</li><li>Boards and comments</li><li>Admin screens and community rules</li></ul></article>
+          <article class="product"><span class="tag">Care</span><h3>Operation and maintenance</h3><p>We keep looking after the site after launch.</p><ul><li>Content updates and new pages</li><li>Regular checks</li><li>Traffic and operations reports</li></ul></article>
+        </div>
+        <p class="case-link"><b>Our work</b> · Some services, like Financial Diary, are planned, built and run by BlueM Partners ourselves.<br><a href="/en/#work">See our work →</a></p>
+      </section>
+
+      <section>
+        <h2>How we work</h2>
+        <ul class="roles">
+          <li><b>Review with previews</b><p>Every change gets a preview link you can open on your phone and comment on.</p></li>
+          <li><b>Screens checked by language and device</b><p>We capture every language on mobile and desktop to catch overflowing or broken text.</p></li>
+          <li><b>Automatic checks before release</b><p>Secrets, broken links and required tags are checked, and only a passing build goes live.</p></li>
+          <li><b>Mindful of running costs</b><p>We suggest hosting and operations that fit the site, so you avoid costs you do not need.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How a project runs</h2>
+        <ol class="steps flow"><li><div><b>Inquiry</b><span>The service you want, reference sites and timing</span></div></li><li><div><b>Requirements</b><span>Pages, languages, features, domain and materials</span></div></li><li><div><b>Quote and proposal</b><span>Scope, schedule and price</span></div></li><li><div><b>Contract</b><span>Scope, review period and revision rounds agreed</span></div></li><li><div><b>Planning and design</b><span>Page structure and design drafts</span></div></li><li><div><b>Build and review</b><span>Revisions on a preview link</span></div></li><li><div><b>Launch</b><span>Domain connection and search registration prep</span></div></li><li><div><b>Operation and maintenance</b><span>Updates and checks after launch</span></div></li></ol>
+        <p class="price-note">Cost depends on scope, number of pages and features. We quote after a consultation.</p>
+      </section>
+
+      <section class="cta">
+        <h2>Have a service in mind?</h2>
+        <p>Tell us what you want to build, any reference sites and your target launch date. We will come back with a scope and schedule, in Korean or English.</p>
+        <div class="actions">
+            <a class="btn" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20%26%20Service%20Development%5D">Email us</a>
+            <span class="addr">contact@bluem-partners.com</span>
+        </div>
+      </section>
+
+      <a class="back" href="/en/">← BlueM Partners home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year">2026</span> BlueM Partners</span>
+      <span style="display:inline-flex;gap:20px;align-items:center"><a href="/privacy/">Privacy policy (Korean)</a> <a class="yt" href="https://www.youtube.com/@bluem-partners" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>YouTube</span></a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

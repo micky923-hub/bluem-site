@@ -72,6 +72,29 @@
     .case-link { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
     .case-link b { color: var(--title); }
     .case-link a { display: inline-block; margin-top: 4px; color: var(--blue); font-weight: 600; text-decoration: none; }
+    /* AI 팀 조직도 */
+    .org-top { display: flex; justify-content: center; }
+    .org-ceo { background: var(--tint2); border: 2px solid var(--blue); border-radius: 14px; padding: 14px 22px; text-align: center; }
+    .org-ceo b { display: block; font-size: 18px; color: var(--title); }
+    .org-ceo span { font-size: 14px; color: var(--muted); }
+    .org-line { width: 2px; height: 22px; background: var(--line); margin: 0 auto; }
+    .org-teams { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 600px) { .org-teams { grid-template-columns: 1fr 1fr; } }
+    .org-teams li { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .org-teams .team { display: block; color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .org-teams b { display: block; color: var(--title); font-size: 17px; margin: 2px 0 6px; }
+    .org-teams .pair { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 6px; font-size: 14px; }
+    .org-teams .pair i { font-style: normal; padding: 3px 10px; border-radius: 999px; background: var(--soft); color: var(--ink); }
+    .org-teams .pair i.chk { background: var(--tint2); color: var(--title); font-weight: 600; }
+    .org-teams .pair em { font-style: normal; color: var(--muted); }
+    .org-teams p { margin: 0; color: var(--muted); font-size: 15px; }
+    .org-gate { margin: 12px 0 0; padding: 14px 18px; border: 2px dashed var(--sky); border-radius: 14px; text-align: center; }
+    .org-gate b { display: block; color: var(--title); }
+    .org-gate span { color: var(--muted); font-size: 15px; }
+    .org-legend { margin: 10px 0 0; color: var(--muted); font-size: 14px; text-align: center; }
+    .org-points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .org-points li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .org-points b { color: var(--title); }
   </style>
 </head>
 <body>
@@ -109,6 +132,27 @@
           <article class="product"><span class="tag">Care</span><h3>运营・维护</h3><p>上线后继续负责网站管理。</p><ul><li>内容修改与新增页面</li><li>定期检查</li><li>访问・运营报告</li></ul></article>
         </div>
         <p class="case-link"><b>运营案例</b> · 也有像 Financial Diary 这样由 BlueM Partners 自行策划、开发和运营的服务。<br><a href="/zh/#work">查看运营案例 →</a></p>
+      </section>
+
+      <section>
+        <h2>AI团队与人共同完成</h2>
+        <p class="intro">在BlueM Partners，按角色分工的AI成员负责草稿与检查，代表负责最终决定与客户沟通。每个团队都把“制作的AI”和“审核的AI”分开，互相再确认一遍。</p>
+        <div class="org-top"><div class="org-ceo"><b>代表（人）</b><span>最终决定 · 客户沟通 · 签约</span></div></div>
+        <div class="org-line" aria-hidden="true"></div>
+        <ul class="org-teams">
+          <li><span class="team">STRATEGY</span><b>战略企划</b><div class="pair"><i>战略室长</i><i>服务策划</i></div><p>梳理业务方向，编写功能说明：做什么、按什么顺序做。</p></li>
+          <li><span class="team">DESIGN</span><b>设计</b><div class="pair"><i>设计师</i><em>→</em><i class="chk">首席设计师审核</i></div><p>制作页面流程与设计稿，再按品牌标准审核。</p></li>
+          <li><span class="team">DEVELOPMENT</span><b>开发</b><div class="pair"><i>技术负责人</i><i>开发者</i><em>→</em><i class="chk">审查者</i><i>运维</i></div><p>设计与开发分开，由非编写者的审查者检查代码后再发布。</p></li>
+          <li><span class="team">SALES</span><b>销售</b><div class="pair"><i>销售</i><em>→</em><i class="chk">销售负责人审核</i></div><p>负责人再次确认提案书、报价单中的范围、日程与承诺。</p></li>
+          <li><span class="team">MARKETING</span><b>市场</b><div class="pair"><i>市场专员</i><em>→</em><i class="chk">市场负责人审核</i></div><p>按夸大表述与数字依据的标准审核推广文章和报告。</p></li>
+          <li><span class="team">OPERATIONS</span><b>经营支持·整理</b><div class="pair"><i>经营支持</i><em>→</em><i class="chk">经营支持负责人确认</i><i>整理</i></div><p>将结算文件与合同核对，并每月整理文档与文件。</p></li>
+        </ul>
+        <div class="org-gate"><b>上线前的自动检查</b><span>机密信息 · 失效链接 · 必要信息 · 搜索可见性 · 各语言页面 · 手机画面</span></div>
+        <p class="org-legend">加粗的角色负责审核其他AI制作的结果。</p>
+        <ul class="org-points">
+          <li><b>决定与发送由人完成。</b> AI只负责草稿与检查，发送报价、签约、批准上线均由代表亲自完成。</li>
+          <li><b>所有项目使用同一套工作规则。</b> 在一个项目中发现的问题会写入共同规则与检查，下一个项目不再重复。</li>
+        </ul>
       </section>
 
       <section>

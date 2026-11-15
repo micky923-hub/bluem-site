@@ -71,6 +71,29 @@
     .case-link { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
     .case-link b { color: var(--title); }
     .case-link a { display: inline-block; margin-top: 4px; color: var(--blue); font-weight: 600; text-decoration: none; }
+    /* AI 팀 조직도 */
+    .org-top { display: flex; justify-content: center; }
+    .org-ceo { background: var(--tint2); border: 2px solid var(--blue); border-radius: 14px; padding: 14px 22px; text-align: center; }
+    .org-ceo b { display: block; font-size: 18px; color: var(--title); }
+    .org-ceo span { font-size: 14px; color: var(--muted); }
+    .org-line { width: 2px; height: 22px; background: var(--line); margin: 0 auto; }
+    .org-teams { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 600px) { .org-teams { grid-template-columns: 1fr 1fr; } }
+    .org-teams li { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .org-teams .team { display: block; color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .org-teams b { display: block; color: var(--title); font-size: 17px; margin: 2px 0 6px; }
+    .org-teams .pair { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 6px; font-size: 14px; }
+    .org-teams .pair i { font-style: normal; padding: 3px 10px; border-radius: 999px; background: var(--soft); color: var(--ink); }
+    .org-teams .pair i.chk { background: var(--tint2); color: var(--title); font-weight: 600; }
+    .org-teams .pair em { font-style: normal; color: var(--muted); }
+    .org-teams p { margin: 0; color: var(--muted); font-size: 15px; }
+    .org-gate { margin: 12px 0 0; padding: 14px 18px; border: 2px dashed var(--sky); border-radius: 14px; text-align: center; }
+    .org-gate b { display: block; color: var(--title); }
+    .org-gate span { color: var(--muted); font-size: 15px; }
+    .org-legend { margin: 10px 0 0; color: var(--muted); font-size: 14px; text-align: center; }
+    .org-points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .org-points li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .org-points b { color: var(--title); }
   </style>
 </head>
 <body>
@@ -108,6 +131,27 @@
           <article class="product"><span class="tag">Care</span><h3>Operation and maintenance</h3><p>We keep looking after the site after launch.</p><ul><li>Content updates and new pages</li><li>Regular checks</li><li>Traffic and operations reports</li></ul></article>
         </div>
         <p class="case-link"><b>Our work</b> · Some services, like Financial Diary, are planned, built and run by BlueM Partners ourselves.<br><a href="/en/#work">See our work →</a></p>
+      </section>
+
+      <section>
+        <h2>AI team and people, working together</h2>
+        <p class="intro">At BlueM Partners, AI team members by role handle drafts and checks, while our CEO makes final decisions and talks with clients. Every team splits the AI that makes from the AI that reviews, so each piece of work is checked again.</p>
+        <div class="org-top"><div class="org-ceo"><b>CEO (human)</b><span>Final decisions · Client contact · Contracts</span></div></div>
+        <div class="org-line" aria-hidden="true"></div>
+        <ul class="org-teams">
+          <li><span class="team">STRATEGY</span><b>Strategy</b><div class="pair"><i>Head of Strategy</i><i>Service Planner</i></div><p>Sets business direction and writes feature specs: what to build and in what order.</p></li>
+          <li><span class="team">DESIGN</span><b>Design</b><div class="pair"><i>Designer</i><em>→</em><i class="chk">Chief Designer review</i></div><p>Creates screen flows and mockups, then reviews them against brand rules.</p></li>
+          <li><span class="team">DEVELOPMENT</span><b>Development</b><div class="pair"><i>Tech Lead</i><i>Developer</i><em>→</em><i class="chk">Reviewer</i><i>Operations</i></div><p>Design and coding are split; a reviewer who did not write the code checks it before release.</p></li>
+          <li><span class="team">SALES</span><b>Sales</b><div class="pair"><i>Sales</i><em>→</em><i class="chk">Sales Lead review</i></div><p>The lead re-checks scope, schedule and promises in proposal and quote drafts.</p></li>
+          <li><span class="team">MARKETING</span><b>Marketing</b><div class="pair"><i>Marketer</i><em>→</em><i class="chk">Marketing Lead review</i></div><p>Promotional posts and reports are reviewed for overstatement and evidence for numbers.</p></li>
+          <li><span class="team">OPERATIONS</span><b>Operations & Cleanup</b><div class="pair"><i>Operations</i><em>→</em><i class="chk">Operations Lead check</i><i>Cleanup</i></div><p>Settlement documents are matched against contracts, and files are tidied every month.</p></li>
+        </ul>
+        <div class="org-gate"><b>Automatic checks before anything goes live</b><span>Secrets · Broken links · Required tags · Search visibility · Language pages · Mobile screens</span></div>
+        <p class="org-legend">Bold roles review work produced by another AI.</p>
+        <ul class="org-points">
+          <li><b>People decide and send.</b> AI handles drafts and checks only; sending quotes, signing contracts and approving launches are done by our CEO.</li>
+          <li><b>Every project follows the same rules.</b> Problems found in one project are added to our shared rules and checks, so they are not repeated in the next.</li>
+        </ul>
       </section>
 
       <section>

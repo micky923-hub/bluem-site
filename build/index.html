@@ -71,6 +71,29 @@
     .case-link { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
     .case-link b { color: var(--title); }
     .case-link a { display: inline-block; margin-top: 4px; color: var(--blue); font-weight: 600; text-decoration: none; }
+    /* AI 팀 조직도 */
+    .org-top { display: flex; justify-content: center; }
+    .org-ceo { background: var(--tint2); border: 2px solid var(--blue); border-radius: 14px; padding: 14px 22px; text-align: center; }
+    .org-ceo b { display: block; font-size: 18px; color: var(--title); }
+    .org-ceo span { font-size: 14px; color: var(--muted); }
+    .org-line { width: 2px; height: 22px; background: var(--line); margin: 0 auto; }
+    .org-teams { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 600px) { .org-teams { grid-template-columns: 1fr 1fr; } }
+    .org-teams li { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .org-teams .team { display: block; color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .org-teams b { display: block; color: var(--title); font-size: 17px; margin: 2px 0 6px; }
+    .org-teams .pair { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 6px; font-size: 14px; }
+    .org-teams .pair i { font-style: normal; padding: 3px 10px; border-radius: 999px; background: var(--soft); color: var(--ink); }
+    .org-teams .pair i.chk { background: var(--tint2); color: var(--title); font-weight: 600; }
+    .org-teams .pair em { font-style: normal; color: var(--muted); }
+    .org-teams p { margin: 0; color: var(--muted); font-size: 15px; }
+    .org-gate { margin: 12px 0 0; padding: 14px 18px; border: 2px dashed var(--sky); border-radius: 14px; text-align: center; }
+    .org-gate b { display: block; color: var(--title); }
+    .org-gate span { color: var(--muted); font-size: 15px; }
+    .org-legend { margin: 10px 0 0; color: var(--muted); font-size: 14px; text-align: center; }
+    .org-points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .org-points li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
+    .org-points b { color: var(--title); }
   </style>
 </head>
 <body>
@@ -108,6 +131,27 @@
           <article class="product"><span class="tag">Care</span><h3>운영·유지보수</h3><p>오픈한 뒤에도 사이트를 맡아 관리합니다.</p><ul><li>내용 수정과 페이지 추가</li><li>정기 점검</li><li>방문·운영 리포트</li></ul></article>
         </div>
         <p class="case-link"><b>운영 사례</b> · Financial Diary처럼 블루엠파트너스가 직접 기획·개발·운영하는 서비스도 있습니다.<br><a href="/#work">운영 사례 보기 →</a></p>
+      </section>
+
+      <section>
+        <h2>AI 팀과 사람이 함께 만듭니다</h2>
+        <p class="intro">블루엠파트너스는 역할별 AI 직원이 초안과 검사를 맡고, 대표가 최종 결정과 고객 소통을 맡습니다. 모든 팀은 만드는 AI와 검수하는 AI를 나눠 서로의 일을 다시 확인합니다.</p>
+        <div class="org-top"><div class="org-ceo"><b>대표 (사람)</b><span>최종 결정 · 고객 소통 · 계약</span></div></div>
+        <div class="org-line" aria-hidden="true"></div>
+        <ul class="org-teams">
+          <li><span class="team">STRATEGY</span><b>전략기획</b><div class="pair"><i>전략실장</i><i>서비스 기획자</i></div><p>사업 방향을 정리하고, 무엇을 어떤 순서로 만들지 기능 명세를 씁니다.</p></li>
+          <li><span class="team">DESIGN</span><b>디자인</b><div class="pair"><i>디자이너</i><em>→</em><i class="chk">수석 디자이너 검수</i></div><p>화면 흐름과 시안을 만들고, 브랜드 기준으로 다시 검수합니다.</p></li>
+          <li><span class="team">DEVELOPMENT</span><b>개발</b><div class="pair"><i>기술 리드</i><i>개발자</i><em>→</em><i class="chk">검토자</i><i>운영 담당</i></div><p>설계와 개발을 나누고, 만든 사람이 아닌 검토자가 코드를 확인한 뒤 배포합니다.</p></li>
+          <li><span class="team">SALES</span><b>영업</b><div class="pair"><i>영업 담당</i><em>→</em><i class="chk">영업팀장 검수</i></div><p>제안서·견적서 초안의 범위·일정·약속을 팀장이 다시 확인합니다.</p></li>
+          <li><span class="team">MARKETING</span><b>마케팅</b><div class="pair"><i>마케팅 담당</i><em>→</em><i class="chk">마케팅팀장 검수</i></div><p>홍보 글과 리포트를 과장 표현·숫자 근거 기준으로 검수합니다.</p></li>
+          <li><span class="team">OPERATIONS</span><b>경영지원·정리</b><div class="pair"><i>경영지원 담당</i><em>→</em><i class="chk">경영지원팀장 확인</i><i>정리 담당</i></div><p>정산 서류를 계약서와 대조하고, 매달 문서와 파일을 정리합니다.</p></li>
+        </ul>
+        <div class="org-gate"><b>사이트에 반영하기 전 자동 검사</b><span>비밀 정보 · 깨진 링크 · 필수 정보 · 검색 노출 · 언어별 페이지 · 휴대폰 화면</span></div>
+        <p class="org-legend">진하게 표시한 역할이 다른 AI가 만든 결과를 검수합니다.</p>
+        <ul class="org-points">
+          <li><b>결정과 발송은 사람이 합니다.</b> AI는 초안과 검사까지만 맡고, 견적 발송·계약·오픈 승인은 대표가 직접 합니다.</li>
+          <li><b>모든 프로젝트가 같은 작업 규칙을 씁니다.</b> 한 프로젝트에서 찾은 문제는 공통 규칙과 검사에 반영해 다음 프로젝트에서 반복하지 않습니다.</li>
+        </ul>
       </section>
 
       <section>

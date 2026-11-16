@@ -354,6 +354,19 @@
     }
     .mail-help .opt.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
     .mail-help .close { margin-top: 6px; border: 0; background: none; color: var(--muted); font-weight: 500; }
+    /* AI 진행 흐름 (3단계) */
+    .aiflow { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: f; }
+    @media (min-width: 720px) { .aiflow { grid-template-columns: repeat(3, 1fr); } }
+    .aiflow li { counter-increment: f; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .aiflow .who { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--soft); color: var(--blue); letter-spacing: .02em; }
+    .aiflow .who.human { background: var(--blue); color: var(--paper); }
+    .aiflow b { display: block; color: var(--title); font-size: 17px; margin: 6px 0 4px; }
+    .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
+    .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
+    .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
+    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
+    #work .aiflow-wrap { margin-top: 28px; }
+    #work .aiflow-wrap h3 { margin: 0 0 12px; font-size: 20px; color: var(--title); }
   </style>
 </head>
 <body class="no-js">
@@ -448,6 +461,16 @@
             <span class="case-link">financialdiary.co.kr 방문하기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
+        <div class="aiflow-wrap reveal">
+          <h3>이렇게 운영합니다</h3>
+          <ol class="aiflow">
+            <li><span class="who">AI</span><b>글·그림 초안</b><p>AI가 운영 기획에 맞춰 글과 설명 그림 초안을 만듭니다.</p></li>
+            <li><span class="who">자동 검사</span><b>게시 전 검사</b><p>광고 표시, 이미지 중복, 요약과 본문의 숫자 대조를 자동으로 검사하고, 사실·숫자를 한 번 더 점검합니다.</p></li>
+            <li><span class="who human">사람</span><b>사람이 확인 후 게시</b><p>사람이 읽고 확인한 글만 게시합니다.</p></li>
+          </ol>
+          <p class="aiflow-note">월간 운영 리포트는 마케팅팀장 AI가 숫자 근거와 과장 표현을 검수한 뒤 사람이 확인합니다.</p>
+          <a class="aiflow-more" href="/build/#ai-team">AI 팀 전체 보기 →</a>
+        </div>
       </div>
     </section>
 

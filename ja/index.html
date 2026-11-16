@@ -296,6 +296,19 @@
     .mail-help .opt.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
     .mail-help .close { margin-top: 6px; border: 0; background: none; color: var(--muted); font-weight: 500; }
       body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; word-break: normal; line-break: strict; }
+    /* AI 진행 흐름 (3단계) */
+    .aiflow { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: f; }
+    @media (min-width: 720px) { .aiflow { grid-template-columns: repeat(3, 1fr); } }
+    .aiflow li { counter-increment: f; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .aiflow .who { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--soft); color: var(--blue); letter-spacing: .02em; }
+    .aiflow .who.human { background: var(--blue); color: var(--paper); }
+    .aiflow b { display: block; color: var(--title); font-size: 17px; margin: 6px 0 4px; }
+    .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
+    .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
+    .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
+    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
+    #work .aiflow-wrap { margin-top: 28px; }
+    #work .aiflow-wrap h3 { margin: 0 0 12px; font-size: 20px; color: var(--title); }
   </style>
 </head>
 <body class="no-js">
@@ -390,6 +403,16 @@
             <span class="case-link">financialdiary.co.kr を見る <span aria-hidden="true">↗</span></span>
           </span>
         </a>
+        <div class="aiflow-wrap reveal">
+          <h3>このように運営しています</h3>
+          <ol class="aiflow">
+            <li><span class="who">AI</span><b>記事・図の下書き</b><p>AIが運営計画に沿って記事と説明図の下書きをつくります。</p></li>
+            <li><span class="who">自動チェック</span><b>公開前のチェック</b><p>広告表示、画像の重複、要約と本文の数字の一致を自動でチェックし、事実と数字をもう一度確認します。</p></li>
+            <li><span class="who human">人</span><b>人が確認して公開</b><p>人が読んで確認した記事だけを公開します。</p></li>
+          </ol>
+          <p class="aiflow-note">月次運営レポートは、マーケティングリーダーAIが数字の根拠と誇張表現を確認したうえで人が確認します。</p>
+          <a class="aiflow-more" href="/ja/build/#ai-team">AIチーム全体を見る →</a>
+        </div>
       </div>
     </section>
 

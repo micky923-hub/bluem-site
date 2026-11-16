@@ -65,6 +65,17 @@
       .cta { background: var(--card); border: 1px solid var(--line); }
       .steps li::before { background: var(--blue); }
     }
+    /* AI 진행 흐름 (3단계) */
+    .aiflow { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: f; }
+    @media (min-width: 720px) { .aiflow { grid-template-columns: repeat(3, 1fr); } }
+    .aiflow li { counter-increment: f; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .aiflow .who { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--soft); color: var(--blue); letter-spacing: .02em; }
+    .aiflow .who.human { background: var(--blue); color: var(--paper); }
+    .aiflow b { display: block; color: var(--title); font-size: 17px; margin: 6px 0 4px; }
+    .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
+    .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
+    .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
+    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
   </style>
 </head>
 <body>
@@ -130,6 +141,18 @@
           <li><b>保険会社</b> · 動画広告に専用の相談番号を入れて問い合わせ転換を測定</li>
         </ul>
         <p class="src">K20の出稿事例</p>
+      </section>
+
+      <section>
+        <h2>AIチームと一緒に進めます</h2>
+        <p class="intro">提案書の下書きと確認はAIチームが分担し、広告費の執行・媒体の決定・送付は人が行います。</p>
+        <ol class="aiflow">
+          <li><span class="who">AI</span><b>提案書・見積の下書き</b><p>営業担当AIが商品・予算・期間に合わせた提案書と見積の下書きをつくります。</p></li>
+          <li><span class="who">AI確認</span><b>営業リーダーの確認</b><p>範囲・日程・約束が合っているか、誇張表現や公開できない情報がないかを別のAIが確認します。</p></li>
+          <li><span class="who human">人</span><b>代表の確認・送付</b><p>代表が自ら確認して送付し、契約と執行の判断も人が行います。</p></li>
+        </ol>
+        <p class="aiflow-note">出稿後の結果報告は媒体社の配信データの数字をそのまま使い、精算書類は管理リーダーAIが契約書と照らし合わせたうえで人が確認します。</p>
+        <a class="aiflow-more" href="/ja/build/#ai-team">AIチーム全体を見る →</a>
       </section>
 
       <section>

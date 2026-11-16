@@ -296,6 +296,19 @@
     .mail-help .opt.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
     .mail-help .close { margin-top: 6px; border: 0; background: none; color: var(--muted); font-weight: 500; }
       body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif; word-break: normal; line-break: strict; }
+    /* AI 진행 흐름 (3단계) */
+    .aiflow { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: f; }
+    @media (min-width: 720px) { .aiflow { grid-template-columns: repeat(3, 1fr); } }
+    .aiflow li { counter-increment: f; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .aiflow .who { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--soft); color: var(--blue); letter-spacing: .02em; }
+    .aiflow .who.human { background: var(--blue); color: var(--paper); }
+    .aiflow b { display: block; color: var(--title); font-size: 17px; margin: 6px 0 4px; }
+    .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
+    .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
+    .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
+    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
+    #work .aiflow-wrap { margin-top: 28px; }
+    #work .aiflow-wrap h3 { margin: 0 0 12px; font-size: 20px; color: var(--title); }
   </style>
 </head>
 <body class="no-js">
@@ -390,6 +403,16 @@
             <span class="case-link">访问 financialdiary.co.kr <span aria-hidden="true">↗</span></span>
           </span>
         </a>
+        <div class="aiflow-wrap reveal">
+          <h3>我们这样运营</h3>
+          <ol class="aiflow">
+            <li><span class="who">AI</span><b>文章与图示草稿</b><p>AI根据运营计划制作文章与说明图草稿。</p></li>
+            <li><span class="who">自动检查</span><b>发布前检查</b><p>自动检查广告标识、图片重复、摘要与正文数字是否一致，并再次核对事实与数字。</p></li>
+            <li><span class="who human">人</span><b>人确认后发布</b><p>只发布经人阅读并确认的文章。</p></li>
+          </ol>
+          <p class="aiflow-note">月度运营报告由市场负责人AI审核数字依据与夸大表述后，再由人确认。</p>
+          <a class="aiflow-more" href="/zh/build/#ai-team">查看完整AI团队 →</a>
+        </div>
       </div>
     </section>
 

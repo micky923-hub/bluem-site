@@ -65,6 +65,17 @@
       .cta { background: var(--card); border: 1px solid var(--line); }
       .steps li::before { background: var(--blue); }
     }
+    /* AI 진행 흐름 (3단계) */
+    .aiflow { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: f; }
+    @media (min-width: 720px) { .aiflow { grid-template-columns: repeat(3, 1fr); } }
+    .aiflow li { counter-increment: f; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--card); }
+    .aiflow .who { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--soft); color: var(--blue); letter-spacing: .02em; }
+    .aiflow .who.human { background: var(--blue); color: var(--paper); }
+    .aiflow b { display: block; color: var(--title); font-size: 17px; margin: 6px 0 4px; }
+    .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
+    .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
+    .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
+    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
   </style>
 </head>
 <body>
@@ -130,6 +141,18 @@
           <li><b>保险公司</b> · 在视频广告中加入专属咨询电话以衡量转化</li>
         </ul>
         <p class="src">K20 投放案例</p>
+      </section>
+
+      <section>
+        <h2>与AI团队一起推进</h2>
+        <p class="intro">提案草稿与审核由AI团队分工负责，广告预算执行、媒体决定与发送由人亲自完成。</p>
+        <ol class="aiflow">
+          <li><span class="who">AI</span><b>提案与报价草稿</b><p>销售AI根据产品、预算与周期制作提案书和报价草稿。</p></li>
+          <li><span class="who">AI审核</span><b>销售负责人审核</b><p>由另一个AI再次确认范围、日程与承诺是否一致，有无夸大表述或不可公开的信息。</p></li>
+          <li><span class="who human">人</span><b>代表确认并发送</b><p>由代表亲自确认并发送，签约与投放决定也由人完成。</p></li>
+        </ol>
+        <p class="aiflow-note">投放后的结果报告直接使用媒体方提供的投放数据，结算文件由经营支持负责人AI与合同核对后再由人确认。</p>
+        <a class="aiflow-more" href="/zh/build/#ai-team">查看完整AI团队 →</a>
       </section>
 
       <section>

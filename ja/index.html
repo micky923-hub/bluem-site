@@ -195,7 +195,6 @@
     .paths a:hover { border-color: var(--on-dark); background: rgba(255,255,255,.08); }
     /* 사례 */
     .works { display: grid; gap: 20px; grid-template-columns: 1fr; }
-    @media (min-width: 860px) { .works { grid-template-columns: 1fr 1fr; } }
     .work { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
     .work:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
     .work:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
@@ -205,6 +204,7 @@
     .work-flow, .work-chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
     .work-flow li, .work-chips li { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--title); }
     .work-flow li + li::before { content: "→ "; color: var(--blue); }
+    @media (min-width: 860px) { .work { flex-direction: row; } .work img { width: 55%; flex: none; aspect-ratio: auto; height: auto; border-bottom: 0; border-right: 1px solid var(--line); } .work-body { justify-content: center; padding: 28px; } }
     /* 문의 띠 */
     .band { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-radius: 16px; background: var(--soft); }
     .band p { margin: 0; color: var(--title); font-weight: 600; }
@@ -435,10 +435,6 @@
           <a class="work" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
             <img src="/assets/work-financial-diary.jpg" alt="Financial Diaryのトップ画面" width="960" height="600" loading="lazy">
             <span class="work-body"><span class="case-tag">生活金融情報ブログ（韓国語）・企画から運営まで</span><strong>Financial Diary</strong><span class="case-desc">税金・年金・ローンなど、暮らしに欠かせないお金の情報をやさしく解説する韓国語のブログです。</span><ul class="work-flow"><li>企画</li><li>デザイン・開発</li><li>検索での露出</li><li>継続的な運営</li></ul><span class="case-link">financialdiary.co.krを見る <span aria-hidden="true">↗</span></span></span>
-          </a>
-          <a class="work" href="/ja/build/">
-            <img src="/assets/work-bluem-site.jpg" alt="BlueM Partnersのホームページ画面" width="960" height="600" loading="lazy">
-            <span class="work-body"><span class="case-tag">会社ホームページ・自社構築</span><strong>bluem-partners.com</strong><span class="case-desc">いまご覧のこのホームページも、BlueM Partnersが自ら作り、運営しています。</span><ul class="work-chips"><li>韓国語・英語・日本語・中国語</li><li>スマホ表示・ダークモード</li><li>公開前の自動チェック</li></ul><span class="case-link">構築の流れを見る <span aria-hidden="true">→</span></span></span>
           </a>
         </div>
         <div class="aiflow-wrap reveal">

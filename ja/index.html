@@ -237,9 +237,17 @@
     @media (max-width: 480px) { .case { flex-direction: column; gap: 16px; } .case-mark { width: 52px; height: 52px; font-size: 18px; border-radius: 14px; } }
 
     /* ⑤ 일하는 방식 */
-    .ways { display: grid; gap: 28px; grid-template-columns: 1fr; }
-    @media (min-width: 760px) { .ways { grid-template-columns: repeat(3, 1fr); } }
-    .way strong { display: block; font-size: 22px; color: var(--title); letter-spacing: -0.02em; margin-bottom: 6px; }
+    .ways { display: grid; gap: 16px; grid-template-columns: 1fr; counter-reset: way; }
+    @media (min-width: 760px) { .ways { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+    .way { position: relative; overflow: hidden; padding: 28px 24px 30px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .way:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
+    .way::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--way-c, var(--blue)); }
+    .way:nth-child(1) { --way-c: var(--title); } .way:nth-child(2) { --way-c: var(--blue); } .way:nth-child(3) { --way-c: var(--sky); }
+    .way-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+    .way-ico { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--ill-bg); color: var(--blue); }
+    .way:nth-child(1) .way-ico { color: var(--title); }
+    .way-no { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; color: var(--line); line-height: 1; }
+    .way strong { display: block; font-size: 22px; color: var(--title); letter-spacing: -0.02em; margin-bottom: 8px; }
     .way p { margin: 0; color: var(--muted); }
     .ways-intro { margin: -12px 0 40px; font-size: 18px; color: var(--ink); max-width: 36em; }
 
@@ -249,6 +257,15 @@
       padding: 28px 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--card);
     }
     .person .portrait { flex: none; width: 96px; height: 96px; }
+    .person .portrait { width: 120px; height: 120px; }
+    .person-lead { margin: 6px 0 4px; font-size: clamp(18px, 2.4vw, 21px); line-height: 1.55; font-weight: 700; color: var(--title); letter-spacing: -0.02em; }
+    .person-rows { margin: 14px 0 0; display: grid; gap: 12px; }
+    .person-rows div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+    .person-rows dt { font-size: 14px; font-weight: 700; color: var(--muted); padding-top: 2px; }
+    .person-rows dd { margin: 0; font-size: 15px; color: var(--ink); }
+    .person-rows dd ul { margin: 0; padding-left: 16px; display: grid; gap: 4px; }
+    .person-rows dd li { font-size: 15px; }
+    @media (max-width: 600px) { .person-rows div { grid-template-columns: 1fr; gap: 2px; } .person-lead br { display: none; } }
     .person ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; }
     .person li { font-size: 16px; color: var(--ink); }
     .nowrap { white-space: nowrap; }
@@ -346,6 +363,12 @@
     .aiflow-more:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
     #work .aiflow-wrap { margin-top: 28px; }
     #work .aiflow-wrap h3 { margin: 0 0 12px; font-size: 20px; color: var(--title); }
+    .fab-contact { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 9; display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 20px; border-radius: 999px; background: var(--blue); color: var(--on-dark); font-weight: 700; font-size: 15px; text-decoration: none; box-shadow: 0 10px 28px rgba(12,35,64,.28); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s, transform .25s, background .2s; }
+    .fab-contact.show { opacity: 1; transform: none; pointer-events: auto; }
+    .fab-contact:hover { background: #2A6FC8; }
+    .fab-contact:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .fab-contact { transition: none; } }
+@media print { .fab-contact { display: none; } }
   </style>
 </head>
 <body class="no-js">
@@ -462,14 +485,17 @@
         <p class="ways-intro reveal">一度の取引が、長く続く関係になるように。</p>
         <div class="ways">
           <div class="way reveal">
+            <div class="way-top"><span class="way-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5C8 19.3 5 15.5 5 11V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="way-no" aria-hidden="true">01</span></div>
             <strong>信頼</strong>
             <p>約束を守り、確認できたことだけをお伝えします。</p>
           </div>
           <div class="way reveal">
+            <div class="way-top"><span class="way-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></svg></span><span class="way-no" aria-hidden="true">02</span></div>
             <strong>実行力</strong>
             <p>長年の営業経験とネットワークで、商談を確実に成約へと導きます。</p>
           </div>
           <div class="way reveal">
+            <div class="way-top"><span class="way-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></span><span class="way-no" aria-hidden="true">03</span></div>
             <strong>長く続く関係</strong>
             <p>一度きりではなく、また頼りたくなるパートナーを目指します。</p>
           </div>
@@ -509,13 +535,13 @@
           </svg>
           <div class="case-body">
             <span class="case-tag">代表</span>
-            <strong>バン・ドンス</strong>
-            <span class="case-desc">ウェブ・メディア・広告テクノロジー分野での経験をもとに、BlueM Partnersを運営しています。</span>
-            <ul>
-              <li>ウェブ制作会社の創業・経営<span class="nowrap">（2003〜2012年）</span></li>
-              <li>動画プラットフォーム事業と Google アド マネージャー 360 パートナー事業の統括</li>
-              <li>キッズ向けOTT「ポロロTV」共同事業の統括</li>
-            </ul>
+            <p class="person-lead">ウェブ制作会社から動画・広告プラットフォームまで、<br>25年にわたりメディア・広告テクノロジー事業を自ら立ち上げ、育ててきました。</p>
+            <dl class="person-rows">
+              <div><dt>担当</dt><dd>事業開発、広告メディア営業、ウェブ・サービス構築の統括</dd></div>
+              <div><dt>専門分野</dt><dd>広告テクノロジー（Google アド マネージャー 360）、オンライン動画プラットフォーム、コンテンツ流通、クラウド提携、ウェブ構築</dd></div>
+              <div><dt>主な経歴</dt><dd><ul><li>オンライン動画プラットフォーム（OVP）事業と Google アド マネージャー 360 パートナー事業の統括</li><li>AWS、NHN Cloud、Bespin Global などクラウド・CDN企業との提携を統括</li><li>韓国アニメIPの中国3大プラットフォーム（iQIYI・Youku・Tencent）への配信、キッズ向けOTT「ポロロTV」共同事業</li><li>ウェブ制作会社を創業・経営：MBC T-SHOP、キッザニア、BCDC、マンドマッピーなどを構築</li></ul></dd></div>
+              <div><dt>活動</dt><dd>韓国コンテンツ振興院 コンテンツ支援事業 評価委員（歴任）</dd></div>
+            </dl>
             <a class="aiflow-more" href="/ja/build/#ai-team">BlueM Partnersの働き方を見る <span aria-hidden="true">→</span></a>
             <a class="profile-link" href="https://www.linkedin.com/in/%EB%8F%99%EC%88%98-%EB%B0%98-120204b8/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.6h-2.6V19h2.6V9.6zM5.8 5.2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM19.5 13.7c0-2.6-1.4-4.3-3.7-4.3-1.3 0-2.2.7-2.6 1.4V9.6h-2.5V19h2.6v-4.7c0-1.2.4-2.4 1.8-2.4 1.4 0 1.6 1.3 1.6 2.5V19h2.6v-5.3z"/></svg>LinkedInプロフィールを見る <span aria-hidden="true">↗</span></a>
           </div>
@@ -631,6 +657,17 @@
     } else {
       items.forEach(function (el) { el.classList.add('on'); });
     }
+  </script>
+
+  <a class="fab-contact" href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>お問い合わせ</a>
+  <script>
+    (function () {
+      var b = document.querySelector('.fab-contact'); if (!b) return;
+      var c = document.getElementById('contact'), inContact = false;
+      if (c && 'IntersectionObserver' in window) new IntersectionObserver(function (e) { inContact = e[0].isIntersecting; t(); }).observe(c);
+      function t() { b.classList.toggle('show', window.scrollY > 320 && !inContact); }
+      window.addEventListener('scroll', t, { passive: true }); t();
+    })();
   </script>
 </body>
 </html>

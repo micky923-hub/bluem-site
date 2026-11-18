@@ -90,6 +90,13 @@
     .org-gate { margin: 12px 0 0; padding: 14px 18px; border: 2px dashed var(--sky); border-radius: 14px; text-align: center; }
     .org-gate b { display: block; color: var(--title); }
     .org-gate span { color: var(--muted); font-size: 15px; }
+    .org-teams .pair i { display: inline-flex; align-items: center; gap: 5px; }
+    .org-teams .pair i::before, .ico-ai::before { content: ""; flex: none; width: 13px; height: 13px; background: var(--blue); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l2.2 6.3L20.5 10.5l-6.3 2.2L12 19l-2.2-6.3L3.5 10.5l6.3-2.2z'/%3E%3Cpath d='M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l2.2 6.3L20.5 10.5l-6.3 2.2L12 19l-2.2-6.3L3.5 10.5l6.3-2.2z'/%3E%3Cpath d='M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z'/%3E%3C/svg%3E") center / contain no-repeat; }
+    .org-ceo b { display: flex !important; justify-content: center; align-items: center; gap: 8px; }
+    .org-ceo b::before, .ico-human::before { content: ""; flex: none; width: 18px; height: 18px; background: var(--blue); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='4.2'/%3E%3Cpath d='M3.5 21c.8-4.4 4.2-7 8.5-7s7.7 2.6 8.5 7z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='4.2'/%3E%3Cpath d='M3.5 21c.8-4.4 4.2-7 8.5-7s7.7 2.6 8.5 7z'/%3E%3C/svg%3E") center / contain no-repeat; }
+    .ico-ai, .ico-human { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; color: var(--title); }
+    .ico-human::before { width: 14px; height: 14px; }
+    .org-key { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin: 14px 0 0; font-size: 14px; }
     .org-legend { margin: 10px 0 0; color: var(--muted); font-size: 14px; text-align: center; }
     .org-points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
     .org-points li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
@@ -157,6 +164,7 @@
           <li><span class="team">OPERATIONS</span><b>경영지원·정리</b><div class="pair"><i>경영지원 담당</i><em>→</em><i class="chk">경영지원팀장 확인</i><i>정리 담당</i></div><p>정산 서류를 계약서와 대조하고, 매달 문서와 파일을 정리합니다.</p></li>
         </ul>
         <div class="org-gate"><b>사이트에 반영하기 전 자동 검사</b><span>비밀 정보 · 깨진 링크 · 필수 정보 · 검색 노출 · 언어별 페이지 · 휴대폰 화면</span></div>
+        <p class="org-key" aria-label="legend"><span class="ico-ai">AI 직원</span><span class="ico-human">사람(대표)</span></p>
         <p class="org-legend">진하게 표시한 역할이 다른 AI가 만든 결과를 검수합니다.</p>
         <ul class="org-points">
           <li><b>결정과 발송은 사람이 합니다.</b> AI는 초안과 검사까지만 맡고, 견적 발송·계약·오픈 승인은 대표가 직접 합니다.</li>

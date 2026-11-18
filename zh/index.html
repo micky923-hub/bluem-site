@@ -249,6 +249,15 @@
       padding: 28px 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--card);
     }
     .person .portrait { flex: none; width: 96px; height: 96px; }
+    .person .portrait { width: 120px; height: 120px; }
+    .person-lead { margin: 6px 0 4px; font-size: clamp(18px, 2.4vw, 21px); line-height: 1.55; font-weight: 700; color: var(--title); letter-spacing: -0.02em; }
+    .person-rows { margin: 14px 0 0; display: grid; gap: 12px; }
+    .person-rows div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+    .person-rows dt { font-size: 14px; font-weight: 700; color: var(--muted); padding-top: 2px; }
+    .person-rows dd { margin: 0; font-size: 15px; color: var(--ink); }
+    .person-rows dd ul { margin: 0; padding-left: 16px; display: grid; gap: 4px; }
+    .person-rows dd li { font-size: 15px; }
+    @media (max-width: 600px) { .person-rows div { grid-template-columns: 1fr; gap: 2px; } .person-lead br { display: none; } }
     .person ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; }
     .person li { font-size: 16px; color: var(--ink); }
     .nowrap { white-space: nowrap; }
@@ -515,13 +524,13 @@
           </svg>
           <div class="case-body">
             <span class="case-tag">代表</span>
-            <strong>潘东洙</strong>
-            <span class="case-desc">以网站、媒体与广告技术领域的经验，运营 BlueM Partners。</span>
-            <ul>
-              <li>创办并经营网站建设公司<span class="nowrap">（2003–2012）</span></li>
-              <li>统筹视频平台业务及 Google Ad Manager 360 合作伙伴业务</li>
-              <li>统筹儿童 OTT「Pororo TV」合作项目</li>
-            </ul>
+            <p class="person-lead">从网站建设公司到视频与广告平台，<br>25 年来亲手打造并发展媒体与广告技术业务。</p>
+            <dl class="person-rows">
+              <div><dt>负责</dt><dd>业务拓展、广告媒体销售、网站与服务建设统筹</dd></div>
+              <div><dt>专业领域</dt><dd>广告技术（Google Ad Manager 360）、在线视频平台、内容发行、云服务合作、网站建设</dd></div>
+              <div><dt>主要经历</dt><dd><ul><li>统筹在线视频平台（OVP）业务及 Google Ad Manager 360 合作伙伴业务</li><li>统筹与 AWS、NHN Cloud、Bespin Global 等云服务及 CDN 企业的合作</li><li>将韩国动画 IP 发行至中国三大视频平台（爱奇艺、优酷、腾讯），统筹儿童 OTT「Pororo TV」合作项目</li><li>创办并经营网站建设公司 8 年（经并购出售）：为 MBC T-SHOP、乐天世界 KidZania、BC 卡等建设网站</li></ul></dd></div>
+              <div><dt>活动</dt><dd>曾任韩国文化内容振兴院内容支援项目评审委员</dd></div>
+            </dl>
             <a class="aiflow-more" href="/zh/build/#ai-team">了解 BlueM 的工作方式 <span aria-hidden="true">→</span></a>
             <a class="profile-link" href="https://www.linkedin.com/in/%EB%8F%99%EC%88%98-%EB%B0%98-120204b8/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.6h-2.6V19h2.6V9.6zM5.8 5.2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM19.5 13.7c0-2.6-1.4-4.3-3.7-4.3-1.3 0-2.2.7-2.6 1.4V9.6h-2.5V19h2.6v-4.7c0-1.2.4-2.4 1.8-2.4 1.4 0 1.6 1.3 1.6 2.5V19h2.6v-5.3z"/></svg>查看 LinkedIn 主页 <span aria-hidden="true">↗</span></a>
           </div>

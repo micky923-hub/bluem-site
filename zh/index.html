@@ -340,7 +340,9 @@
     .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
     .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
     .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
-    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
+    .aiflow-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--blue); color: var(--blue); background: var(--card); font-weight: 700; text-decoration: none; font-size: 15px; transition: background .2s, color .2s; }
+    .aiflow-more:hover { background: var(--blue); color: var(--on-dark); }
+    .aiflow-more:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
     #work .aiflow-wrap { margin-top: 28px; }
     #work .aiflow-wrap h3 { margin: 0 0 12px; font-size: 20px; color: var(--title); }
   </style>
@@ -445,7 +447,7 @@
             <li><span class="who human">确认</span><b>终审后发布</b><p>只发布内容与出处经过最终审核的文章。</p></li>
           </ol>
           <p class="aiflow-note">月度运营报告也会在核对数字依据与夸大表述后提交。</p>
-          <a class="aiflow-more" href="/zh/build/#ai-team">了解我们的工作方式 →</a>
+          <a class="aiflow-more" href="/zh/build/">查看网站与服务建设流程 <span aria-hidden="true">→</span></a>
         </div>
       
         <div class="band reveal"><p>还没想好具体需求也没关系，欢迎随时咨询。</p><a class="btn" href="#contact">联系我们 <span aria-hidden="true">→</span></a></div>

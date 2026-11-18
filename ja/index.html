@@ -340,7 +340,9 @@
     .aiflow b::before { content: counter(f) ". "; color: var(--blue); }
     .aiflow p { margin: 0; color: var(--muted); font-size: 15px; }
     .aiflow-note { margin: 12px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; color: var(--ink); }
-    .aiflow-more { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 15px; }
+    .aiflow-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--blue); color: var(--blue); background: var(--card); font-weight: 700; text-decoration: none; font-size: 15px; transition: background .2s, color .2s; }
+    .aiflow-more:hover { background: var(--blue); color: var(--on-dark); }
+    .aiflow-more:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
     #work .aiflow-wrap { margin-top: 28px; }
     #work .aiflow-wrap h3 { margin: 0 0 12px; font-size: 20px; color: var(--title); }
   </style>
@@ -445,7 +447,7 @@
             <li><span class="who human">確認</span><b>最終チェック後に公開</b><p>内容と出典を最後にもう一度チェックした記事だけを公開します。</p></li>
           </ol>
           <p class="aiflow-note">月次運営レポートも、数字の根拠と誇張表現を確認してからお届けします。</p>
-          <a class="aiflow-more" href="/ja/build/#ai-team">私たちの進め方を見る →</a>
+          <a class="aiflow-more" href="/ja/build/">ホームページ・サービス構築の流れを見る <span aria-hidden="true">→</span></a>
         </div>
       
         <div class="band reveal"><p>ご依頼内容が決まっていなくても大丈夫です。お気軽にご相談ください。</p><a class="btn" href="#contact">お問い合わせ <span aria-hidden="true">→</span></a></div>

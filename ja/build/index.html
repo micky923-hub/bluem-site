@@ -95,6 +95,13 @@
     .org-points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
     .org-points li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
     .org-points b { color: var(--title); }
+    .faq { margin: 0; display: grid; gap: 10px; }
+    .faq details { border: 1px solid var(--line); border-radius: 14px; background: var(--card); padding: 0 18px; }
+    .faq summary { cursor: pointer; list-style: none; padding: 16px 0; font-weight: 700; color: var(--title); display: flex; justify-content: space-between; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--blue); font-weight: 700; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq p { margin: 0 0 16px; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -110,6 +117,8 @@
         </svg>
         BlueM Partners
       </a>
+      <nav class="sub-nav" aria-label="メインメニュー"><a href="/ja/fast/">広告メディア</a><a href="/ja/build/">ホームページ構築</a><a href="/ja/#work">事例</a><a class="nav-cta" href="/ja/#contact">お問い合わせ</a></nav>
+      <nav class="sub-lang" aria-label="Language"><a href="/build/" hreflang="ko">KO</a><a href="/en/build/" hreflang="en">EN</a><a href="/ja/build/" hreflang="ja" aria-current="page">JA</a><a href="/zh/build/" hreflang="zh-Hans">ZH</a></nav>
     </div>
   </header>
 
@@ -170,6 +179,17 @@
         <h2>ご依頼の流れ</h2>
         <ol class="steps flow"><li><div><b>お問い合わせ</b><span>作りたいサービス、参考サイト、ご希望の日程</span></div></li><li><div><b>要件整理</b><span>ページ・言語・機能、ドメインと素材の準備</span></div></li><li><div><b>お見積り・ご提案</b><span>範囲・日程・金額のご提案</span></div></li><li><div><b>ご契約</b><span>範囲、検収期間、修正回数の確定</span></div></li><li><div><b>企画・デザイン</b><span>画面構成とデザイン案</span></div></li><li><div><b>開発・検収</b><span>確認用URLで確認しながら修正</span></div></li><li><div><b>公開</b><span>ドメイン接続、検索エンジン登録の準備</span></div></li><li><div><b>運営・保守</b><span>公開後の修正と点検</span></div></li></ol>
         <p class="price-note">費用は範囲・ページ数・機能によって異なるため、ご相談後にお見積りします。</p>
+      </section>
+
+      <section id="faq">
+        <h2>よくある質問</h2>
+        <div class="faq">
+          <details><summary>期間はどのくらいかかりますか？</summary><p>ページ数・言語数・機能によって異なります。要件を整理したうえで、段階ごとのスケジュールをご提案します。</p></details>
+          <details><summary>修正は何回までできますか？</summary><p>修正回数と検収期間は契約時に決め、契約書に数字で記載します。確認用URLでご覧いただきながらご意見をお寄せください。</p></details>
+          <details><summary>公開後の管理もお願いできますか？</summary><p>はい。内容の修正、ページの追加、定期点検などの運営・保守を別途お引き受けできます。</p></details>
+          <details><summary>ドメインとホスティングはどうなりますか？</summary><p>お持ちのドメインの接続や新規取得の方法をご案内します。ホスティングはサイトに合わせ、運営コストを抑えられる方法をご提案します。</p></details>
+          <details><summary>費用はいくらですか？</summary><p>範囲と機能によって異なるため、ご相談後にお見積りします。</p></details>
+        </div>
       </section>
 
       <section class="cta">

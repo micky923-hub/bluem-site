@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlueM Partners | 值得信赖的商业伙伴</title>
-  <meta name="description" content="BlueM Partners 是一家韩国销售公司，为广告主对接以户外广告（OOH）为核心的广告媒体及流媒体电视（FAST），并承接网站与网络服务建设。">
+  <meta name="description" content="BlueM Partners 是一家韩国销售公司，为广告主和创作者对接流媒体电视（FAST）广告与频道入驻等新型广告媒体，并承接网站与网络服务建设。">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bluem-partners.com/zh/">
   <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="BlueM Partners">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:title" content="BlueM Partners | 值得信赖的商业伙伴">
-  <meta property="og:description" content="将以户外广告为核心的广告媒体与网站建设，对接给真正需要它们的企业。">
+  <meta property="og:description" content="将新型广告媒体与网站建设，对接给真正需要它们的企业。">
   <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -46,6 +46,7 @@
       --card: #FFFFFF;
       --field-line: #CBD3DF;
       --title: var(--navy);
+      --on-dark: #FFFFFF;
       --ill-bg: #E8F1FD;
       --max: 1040px;
       color-scheme: light dark;
@@ -179,6 +180,39 @@
       font-size: 15px; font-weight: 600; text-decoration: none;
     }
     .card .more:hover { text-decoration: underline; }
+    /* 머리글 메뉴 */
+    .top-nav { display: flex; align-items: center; gap: 4px; margin-left: auto; margin-right: 12px; }
+    .top-nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 15px; font-weight: 600; padding: 6px 10px; border-radius: 999px; }
+    .top-nav a:hover { color: var(--on-dark); background: rgba(255,255,255,.08); }
+    .top-nav a.nav-cta { background: var(--blue); color: var(--on-dark); }
+    @media (max-width: 640px) { .top-nav a:not(.nav-cta) { display: none; } .top-nav { margin-right: 8px; } }
+    @media (max-width: 640px) { .hero .mark { opacity: .06; } }
+    /* 목적별 길 */
+    .paths { margin-top: 28px; }
+    .paths p { margin: 0 0 10px; color: var(--sky); font-size: 14px; font-weight: 600; }
+    .paths ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .paths a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); background: rgba(12,35,64,.72); color: var(--on-dark); text-decoration: none; font-size: 15px; font-weight: 600; }
+    .paths a:hover { border-color: var(--on-dark); background: rgba(255,255,255,.08); }
+    /* 사례 */
+    .works { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .works { grid-template-columns: 1fr 1fr; } }
+    .work { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .work:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
+    .work:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+    .work img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: var(--soft); }
+    .work-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+    .work-body strong { font-size: 22px; color: var(--title); letter-spacing: -0.02em; }
+    .work-flow, .work-chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    .work-flow li, .work-chips li { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--title); }
+    .work-flow li + li::before { content: "→ "; color: var(--blue); }
+    /* 문의 띠 */
+    .band { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-radius: 16px; background: var(--soft); }
+    .band p { margin: 0; color: var(--title); font-weight: 600; }
+    /* 문의 뒤 진행 순서 */
+    .next-steps { margin: 0 auto 28px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; counter-reset: n; max-width: 760px; }
+    .next-steps li { counter-increment: n; font-size: 14px; font-weight: 600; color: var(--title); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+    .next-steps li::before { content: counter(n) ". "; color: var(--blue); }
+    .steps-h { margin: 0 0 12px !important; font-size: 15px; font-weight: 700; color: var(--muted) !important; }
     .card .more + .more { display: block; margin-top: 8px; }
 
     /* ④-2 운영 사례 */
@@ -326,6 +360,7 @@
         </svg>
         BlueM Partners
       </a>
+      <nav class="top-nav" aria-label="主菜单"><a href="#services">业务</a><a href="#work">案例</a><a href="#contact" class="nav-cta">联系</a></nav>
       <details class="lang-menu"><summary class="lang" aria-label="Language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>中文 ▾</summary><ul><li><a href="/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/en/" hreflang="en" lang="en">English</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">中文（简体）</a></li></ul></details>
     </div>
   </header>
@@ -343,10 +378,11 @@
       <div class="wrap">
         <p class="eyebrow">Media &amp; Technology Sales House · Korea</p>
         <h1>值得信赖的<br>商业伙伴。</h1>
-        <p class="lead">BlueM Partners 是一家韩国销售公司，专注于将以户外广告为核心的广告媒体，以及网站与服务建设，对接给真正需要它们的企业。</p>
+        <p class="lead">BlueM Partners 是一家韩国销售公司，专注于将流媒体电视（FAST）等新型广告媒体，以及网站与服务建设，对接给真正需要它们的企业。</p>
         <div class="hero-actions">
           <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20Inquiry%5D">联系我们 <span aria-hidden="true">→</span></a>
         </div>
+        <div class="paths"><p>您需要哪方面的帮助？</p><ul><li><a href="/zh/fast/">投放广告 <span aria-hidden="true">→</span></a></li><li><a href="/zh/build/">建设网站 <span aria-hidden="true">→</span></a></li><li><a href="/zh/fast/#creators">入驻 FAST 频道 <span aria-hidden="true">→</span></a></li></ul></div>
       </div>
     </section>
 
@@ -370,7 +406,7 @@
           <article class="card reveal">
             <span class="bar" style="background: var(--title)"></span>
             <h3>广告媒体对接</h3>
-            <p>以地铁、门店和城市地标的户外广告（OOH）为核心，为广告主对接韩国的广告资源，包括流媒体电视（FAST）。</p>
+            <p>为广告主和创作者对接韩国新出现的广告资源，如流媒体电视（FAST）广告和 YouTube 创作者的 FAST 频道入驻。</p>
             <a class="more" href="/zh/fast/">与 K20 合作的 FAST 广告 <span aria-hidden="true">→</span></a>
             <a class="more" href="/zh/fast/#creators">YouTube 创作者 FAST 入驻 <span aria-hidden="true">→</span></a>
           </article>
@@ -394,26 +430,29 @@
     <section class="block" id="work">
       <div class="wrap">
         <p class="label reveal">Our Work</p>
-        <h2 class="reveal">我们运营的媒体</h2>
-        <a class="case reveal" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
-          <span class="case-mark" aria-hidden="true">FD</span>
-          <span class="case-body">
-            <span class="case-tag">个人理财资讯博客（韩语）</span>
-            <strong>Financial Diary</strong>
-            <span class="case-desc">一个用通俗易懂的语言讲解税务、养老金、贷款等日常理财知识的韩国博客。从内容策划、网站开发与运营到搜索优化，均由 BlueM Partners 全程负责。</span>
-            <span class="case-link">访问 financialdiary.co.kr <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
+        <h2 class="reveal">BlueM Partners 建设和运营的项目</h2>
+        <div class="works reveal">
+          <a class="work" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
+            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary 首页画面" width="960" height="600" loading="lazy">
+            <span class="work-body"><span class="case-tag">生活金融信息博客（韩语）・从策划到运营</span><strong>Financial Diary</strong><span class="case-desc">用通俗易懂的语言讲解税务、养老金、贷款等日常必需金融信息的韩语博客。</span><ul class="work-flow"><li>策划</li><li>设计・开发</li><li>搜索曝光</li><li>持续运营</li></ul><span class="case-link">访问 financialdiary.co.kr <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <a class="work" href="/zh/build/">
+            <img src="/assets/work-bluem-site.jpg" alt="BlueM Partners 官网画面" width="960" height="600" loading="lazy">
+            <span class="work-body"><span class="case-tag">企业官网・自主建设</span><strong>bluem-partners.com</strong><span class="case-desc">您正在浏览的这个网站，也由 BlueM Partners 自主建设和运营。</span><ul class="work-chips"><li>韩语・英语・日语・中文</li><li>手机适配・深色模式</li><li>发布前自动检查</li></ul><span class="case-link">查看建设流程 <span aria-hidden="true">→</span></span></span>
+          </a>
+        </div>
         <div class="aiflow-wrap reveal">
           <h3>我们这样运营</h3>
           <ol class="aiflow">
-            <li><span class="who">AI</span><b>文章与图示草稿</b><p>AI根据运营计划制作文章与说明图草稿。</p></li>
-            <li><span class="who">自动检查</span><b>发布前检查</b><p>自动检查广告标识、图片重复、摘要与正文数字是否一致，并再次核对事实与数字。</p></li>
-            <li><span class="who human">人</span><b>人确认后发布</b><p>只发布经人阅读并确认的文章。</p></li>
+            <li><span class="who">策划</span><b>选题与草稿</b><p>根据运营计划选定主题，制作文章与说明图草稿。</p></li>
+            <li><span class="who">检查</span><b>发布前检查</b><p>检查广告标识、图片重复、摘要与正文数字是否一致，并再次核对事实与数字。</p></li>
+            <li><span class="who human">确认</span><b>人确认后发布</b><p>只发布经人阅读并确认的文章。</p></li>
           </ol>
-          <p class="aiflow-note">月度运营报告由市场负责人AI审核数字依据与夸大表述后，再由人确认。</p>
-          <a class="aiflow-more" href="/zh/build/#ai-team">查看完整AI团队 →</a>
+          <p class="aiflow-note">月度运营报告也会在核对数字依据与夸大表述后提交。</p>
+          <a class="aiflow-more" href="/zh/build/#ai-team">了解我们的工作方式 →</a>
         </div>
+      
+        <div class="band reveal"><p>还没想好具体需求也没关系，欢迎随时咨询。</p><a class="btn" href="#contact">联系我们 <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
@@ -490,7 +529,9 @@
       <div class="wrap reveal">
         <p class="label">Contact</p>
         <h2>期待与您合作</h2>
-        <p>广告媒体、技术项目、媒体运营或商务合作，欢迎随时联系。可使用中文咨询（我们将以韩语或英语回复）。</p>
+        <p>广告媒体、网站与服务建设、频道入驻、媒体运营或商务合作，欢迎随时联系。可使用中文咨询（我们将以韩语或英语回复）。</p>
+        <p class="steps-h">咨询后的流程</p>
+        <ol class="next-steps"><li>留下咨询</li><li>2 个工作日内回复</li><li>沟通确定范围</li><li>方案与报价</li></ol>
         <div class="actions">
           <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20Inquiry%5D">发送邮件 <span aria-hidden="true">→</span></a>
           <a class="btn ghost" href="/contact/">在线咨询表（韩语）</a>

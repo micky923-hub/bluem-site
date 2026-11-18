@@ -11,6 +11,7 @@
   --card: #FFFFFF;
   --field-line: #CBD3DF;
   --title: var(--navy);
+  --on-dark: #FFFFFF;
   --tint: #F1F6FE;
   --tint2: #E8F1FD;
   --danger: #C62828;
@@ -61,6 +62,7 @@ a { color: var(--blue); }
 .page-head p { margin: 10px 0 0; color: #D5DEEB; }
 
 main { padding: 44px 0 72px; }
+.next-steps + main { padding-top: 28px; }
 
 /* 양식 */
 .field { margin-bottom: 24px; border: 0; padding: 0; min-width: 0; }
@@ -139,3 +141,22 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: s
 footer a { color: var(--muted); }
 footer .yt { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--muted); }
 footer .yt:hover { color: #FF0000; }
+
+/* 하위 페이지 머리글 메뉴 (첫 화면 메뉴와 같은 모양) */
+.top .wrap { display: flex; align-items: center; gap: 8px; }
+.sub-nav { display: flex; align-items: center; gap: 2px; margin-left: auto; }
+.sub-nav a, .sub-lang a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 15px; font-weight: 600; padding: 6px 10px; border-radius: 999px; }
+.sub-nav a:hover, .sub-lang a:hover { color: var(--on-dark); background: rgba(255,255,255,.08); }
+.sub-nav a.nav-cta { background: var(--blue); color: var(--on-dark); }
+.sub-lang { display: flex; gap: 0; border-left: 1px solid rgba(255,255,255,.2); padding-left: 6px; }
+.sub-lang a { font-size: 13px; padding: 6px 6px; }
+.sub-lang a[aria-current="page"] { color: var(--sky); }
+@media (max-width: 760px) { .sub-nav a:not(.nav-cta) { display: none; } }
+.top .brand { white-space: nowrap; flex: none; }
+@media (max-width: 760px) { .sub-lang a { padding: 6px 4px; font-size: 12px; } }
+@media (max-width: 400px) { .brand { font-size: 15px; gap: 8px; } .brand svg { width: 28px; } .sub-nav a.nav-cta { padding: 6px 10px; font-size: 14px; } }
+
+/* 문의 뒤 진행 순서 */
+.next-steps { margin: 28px auto 0; padding: 0 20px; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; counter-reset: n; max-width: 760px; position: relative; }
+.next-steps li { counter-increment: n; font-size: 14px; font-weight: 600; color: var(--title); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+.next-steps li::before { content: counter(n) ". "; color: var(--blue); }

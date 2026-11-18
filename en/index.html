@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlueM Partners | Your Reliable Business Partner</title>
-  <meta name="description" content="BlueM Partners is a Korean sales house connecting advertisers with out-of-home (OOH) and streaming TV (FAST) media, and building websites and web services.">
+  <meta name="description" content="BlueM Partners is a Korean sales house connecting advertisers and creators with new ad media such as streaming TV (FAST), and building websites and web services.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bluem-partners.com/en/">
   <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="BlueM Partners">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="BlueM Partners | Your Reliable Business Partner">
-  <meta property="og:description" content="Connecting advertising media, led by out-of-home, and website and service development with the businesses that need them.">
+  <meta property="og:description" content="Connecting new advertising media and website and service development with the businesses that need them.">
   <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -46,6 +46,7 @@
       --card: #FFFFFF;
       --field-line: #CBD3DF;
       --title: var(--navy);
+      --on-dark: #FFFFFF;
       --ill-bg: #E8F1FD;
       --max: 1040px;
       color-scheme: light dark;
@@ -179,6 +180,39 @@
       font-size: 15px; font-weight: 600; text-decoration: none;
     }
     .card .more:hover { text-decoration: underline; }
+    /* 머리글 메뉴 */
+    .top-nav { display: flex; align-items: center; gap: 4px; margin-left: auto; margin-right: 12px; }
+    .top-nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 15px; font-weight: 600; padding: 6px 10px; border-radius: 999px; }
+    .top-nav a:hover { color: var(--on-dark); background: rgba(255,255,255,.08); }
+    .top-nav a.nav-cta { background: var(--blue); color: var(--on-dark); }
+    @media (max-width: 640px) { .top-nav a:not(.nav-cta) { display: none; } .top-nav { margin-right: 8px; } }
+    @media (max-width: 640px) { .hero .mark { opacity: .06; } }
+    /* 목적별 길 */
+    .paths { margin-top: 28px; }
+    .paths p { margin: 0 0 10px; color: var(--sky); font-size: 14px; font-weight: 600; }
+    .paths ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .paths a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); background: rgba(12,35,64,.72); color: var(--on-dark); text-decoration: none; font-size: 15px; font-weight: 600; }
+    .paths a:hover { border-color: var(--on-dark); background: rgba(255,255,255,.08); }
+    /* 사례 */
+    .works { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .works { grid-template-columns: 1fr 1fr; } }
+    .work { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .work:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
+    .work:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+    .work img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: var(--soft); }
+    .work-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+    .work-body strong { font-size: 22px; color: var(--title); letter-spacing: -0.02em; }
+    .work-flow, .work-chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    .work-flow li, .work-chips li { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--title); }
+    .work-flow li + li::before { content: "→ "; color: var(--blue); }
+    /* 문의 띠 */
+    .band { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-radius: 16px; background: var(--soft); }
+    .band p { margin: 0; color: var(--title); font-weight: 600; }
+    /* 문의 뒤 진행 순서 */
+    .next-steps { margin: 0 auto 28px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; counter-reset: n; max-width: 760px; }
+    .next-steps li { counter-increment: n; font-size: 14px; font-weight: 600; color: var(--title); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+    .next-steps li::before { content: counter(n) ". "; color: var(--blue); }
+    .steps-h { margin: 0 0 12px !important; font-size: 15px; font-weight: 700; color: var(--muted) !important; }
     .card .more + .more { display: block; margin-top: 8px; }
 
     /* ④-2 운영 사례 */
@@ -325,6 +359,7 @@
         </svg>
         BlueM Partners
       </a>
+      <nav class="top-nav" aria-label="Main menu"><a href="#services">Services</a><a href="#work">Work</a><a href="#contact" class="nav-cta">Contact</a></nav>
       <details class="lang-menu"><summary class="lang" aria-label="Language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>EN ▾</summary><ul><li><a href="/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/en/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文（简体）</a></li></ul></details>
     </div>
   </header>
@@ -342,10 +377,11 @@
       <div class="wrap">
         <p class="eyebrow">Media &amp; Technology Sales House · Korea</p>
         <h1>Your reliable<br>business partner.</h1>
-        <p class="lead">BlueM Partners is a Korean sales house that connects advertising media, led by out-of-home (OOH), and website and service development with the businesses that need them.</p>
+        <p class="lead">BlueM Partners is a Korean sales house that connects new advertising media such as streaming TV (FAST), and website and service development, with the businesses that need them.</p>
         <div class="hero-actions">
           <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20Inquiry%5D">Contact us <span aria-hidden="true">→</span></a>
         </div>
+        <div class="paths"><p>What can we help with?</p><ul><li><a href="/en/fast/">Run an ad campaign <span aria-hidden="true">→</span></a></li><li><a href="/en/build/">Build a website <span aria-hidden="true">→</span></a></li><li><a href="/en/fast/#creators">Launch a FAST channel <span aria-hidden="true">→</span></a></li></ul></div>
       </div>
     </section>
 
@@ -369,7 +405,7 @@
           <article class="card reveal">
             <span class="bar" style="background: var(--title)"></span>
             <h3>Advertising media</h3>
-            <p>Led by out-of-home (OOH) media in subways, stores and city landmarks, we connect advertisers with ad inventory in Korea, including streaming TV (FAST).</p>
+            <p>We connect advertisers and creators with new ad inventory in Korea, such as streaming TV (FAST) advertising and FAST channels for YouTube creators.</p>
             <a class="more" href="/en/fast/">FAST advertising with K20 <span aria-hidden="true">→</span></a>
             <a class="more" href="/en/fast/#creators">FAST channels for YouTube creators <span aria-hidden="true">→</span></a>
           </article>
@@ -393,26 +429,29 @@
     <section class="block" id="work">
       <div class="wrap">
         <p class="label reveal">Our Work</p>
-        <h2 class="reveal">Media we operate</h2>
-        <a class="case reveal" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
-          <span class="case-mark" aria-hidden="true">FD</span>
-          <span class="case-body">
-            <span class="case-tag">Personal finance blog (Korean)</span>
-            <strong>Financial Diary</strong>
-            <span class="case-desc">A Korean blog that explains everyday money topics &mdash; tax, pensions and loans &mdash; in plain language. BlueM Partners runs it end to end: content planning, site development and operations, and search visibility.</span>
-            <span class="case-link">Visit financialdiary.co.kr <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
+        <h2 class="reveal">What we have built and run</h2>
+        <div class="works reveal">
+          <a class="work" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
+            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary home page" width="960" height="600" loading="lazy">
+            <span class="work-body"><span class="case-tag">Personal finance blog (Korean) · from planning to operation</span><strong>Financial Diary</strong><span class="case-desc">A Korean blog that explains everyday money topics, such as tax, pensions and loans, in plain language.</span><ul class="work-flow"><li>Planning</li><li>Design and build</li><li>Search visibility</li><li>Steady operation</li></ul><span class="case-link">Visit financialdiary.co.kr <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <a class="work" href="/en/build/">
+            <img src="/assets/work-bluem-site.jpg" alt="BlueM Partners website screen" width="960" height="600" loading="lazy">
+            <span class="work-body"><span class="case-tag">Company website · built in-house</span><strong>bluem-partners.com</strong><span class="case-desc">The site you are reading now is also built and run by BlueM Partners.</span><ul class="work-chips"><li>Korean · English · Japanese · Chinese</li><li>Mobile layout · dark mode</li><li>Automatic checks before release</li></ul><span class="case-link">How we build <span aria-hidden="true">→</span></span></span>
+          </a>
+        </div>
         <div class="aiflow-wrap reveal">
           <h3>How we run it</h3>
           <ol class="aiflow">
-            <li><span class="who">AI</span><b>Post & graphic drafts</b><p>AI drafts posts and explanatory graphics based on the editorial plan.</p></li>
-            <li><span class="who">Automatic checks</span><b>Checks before publishing</b><p>Ad disclosures, duplicate images and numbers in summaries versus the post are checked automatically, and facts and figures are reviewed once more.</p></li>
-            <li><span class="who human">Human</span><b>Published after human review</b><p>Only posts a person has read and approved are published.</p></li>
+            <li><span class="who">Planning</span><b>Topics and drafts</b><p>Topics are chosen to fit the editorial plan, then posts and explanatory graphics are drafted.</p></li>
+            <li><span class="who">Checks</span><b>Checks before publishing</b><p>Ad disclosures, duplicate images and numbers in summaries versus the post are checked, and facts and figures are reviewed once more.</p></li>
+            <li><span class="who human">Review</span><b>Published after human review</b><p>Only posts a person has read and approved are published.</p></li>
           </ol>
-          <p class="aiflow-note">Monthly reports are reviewed by our Marketing Lead AI for evidence behind numbers and overstatement, then confirmed by a person.</p>
-          <a class="aiflow-more" href="/en/build/#ai-team">See the full AI team →</a>
+          <p class="aiflow-note">Monthly reports are also checked for evidence behind numbers and overstatement before they are shared.</p>
+          <a class="aiflow-more" href="/en/build/#ai-team">See how we work →</a>
         </div>
+      
+        <div class="band reveal"><p>Not sure yet what you need? That is fine. Just ask.</p><a class="btn" href="#contact">Contact us <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
@@ -489,7 +528,9 @@
       <div class="wrap reveal">
         <p class="label">Contact</p>
         <h2>Let&rsquo;s work together</h2>
-        <p>Advertising media, technology projects, media operations or partnerships &mdash; we would be glad to hear from you. We reply in English or Korean.</p>
+        <p>Advertising media, website and service development, channel onboarding, media operations or partnerships &mdash; we would be glad to hear from you. We reply in English or Korean.</p>
+        <p class="steps-h">What happens after you write</p>
+        <ol class="next-steps"><li>You send a message</li><li>We reply within 2 business days</li><li>A call to shape the scope</li><li>Proposal and quote</li></ol>
         <div class="actions">
           <a class="btn js-mail" href="mailto:contact@bluem-partners.com?subject=%5BWebsite%20Inquiry%5D">Email us <span aria-hidden="true">→</span></a>
           <a class="btn ghost" href="/contact/">Contact form (Korean)</a>

@@ -195,7 +195,6 @@
     .paths a:hover { border-color: var(--on-dark); background: rgba(255,255,255,.08); }
     /* 사례 */
     .works { display: grid; gap: 20px; grid-template-columns: 1fr; }
-    @media (min-width: 860px) { .works { grid-template-columns: 1fr 1fr; } }
     .work { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
     .work:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
     .work:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
@@ -205,6 +204,7 @@
     .work-flow, .work-chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
     .work-flow li, .work-chips li { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--title); }
     .work-flow li + li::before { content: "→ "; color: var(--blue); }
+    @media (min-width: 860px) { .work { flex-direction: row; } .work img { width: 55%; flex: none; aspect-ratio: auto; height: auto; border-bottom: 0; border-right: 1px solid var(--line); } .work-body { justify-content: center; padding: 28px; } }
     /* 문의 띠 */
     .band { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-radius: 16px; background: var(--soft); }
     .band p { margin: 0; color: var(--title); font-weight: 600; }
@@ -432,12 +432,8 @@
         <h2 class="reveal">What we have built and run</h2>
         <div class="works reveal">
           <a class="work" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
-            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary home page" width="960" height="600" loading="lazy">
+            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary home page" width="927" height="579" loading="lazy">
             <span class="work-body"><span class="case-tag">Personal finance blog (Korean) · from planning to operation</span><strong>Financial Diary</strong><span class="case-desc">A Korean blog that explains everyday money topics, such as tax, pensions and loans, in plain language.</span><ul class="work-flow"><li>Planning</li><li>Design and build</li><li>Search visibility</li><li>Steady operation</li></ul><span class="case-link">Visit financialdiary.co.kr <span aria-hidden="true">↗</span></span></span>
-          </a>
-          <a class="work" href="/en/build/">
-            <img src="/assets/work-bluem-site.jpg" alt="BlueM Partners website screen" width="960" height="600" loading="lazy">
-            <span class="work-body"><span class="case-tag">Company website · built in-house</span><strong>bluem-partners.com</strong><span class="case-desc">The site you are reading now is also built and run by BlueM Partners.</span><ul class="work-chips"><li>Korean · English · Japanese · Chinese</li><li>Mobile layout · dark mode</li><li>Automatic checks before release</li></ul><span class="case-link">How we build <span aria-hidden="true">→</span></span></span>
           </a>
         </div>
         <div class="aiflow-wrap reveal">
@@ -445,7 +441,7 @@
           <ol class="aiflow">
             <li><span class="who">Planning</span><b>Topics and drafts</b><p>Topics are chosen to fit the editorial plan, then posts and explanatory graphics are drafted.</p></li>
             <li><span class="who">Checks</span><b>Checks before publishing</b><p>Ad disclosures, duplicate images and numbers in summaries versus the post are checked, and facts and figures are reviewed once more.</p></li>
-            <li><span class="who human">Review</span><b>Published after human review</b><p>Only posts a person has read and approved are published.</p></li>
+            <li><span class="who human">Review</span><b>Published after final review</b><p>Only posts whose content and sources pass a final review are published.</p></li>
           </ol>
           <p class="aiflow-note">Monthly reports are also checked for evidence behind numbers and overstatement before they are shared.</p>
           <a class="aiflow-more" href="/en/build/#ai-team">See how we work →</a>

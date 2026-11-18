@@ -254,7 +254,6 @@
     .paths a:hover { border-color: var(--on-dark); background: rgba(255,255,255,.08); }
     /* 사례 */
     .works { display: grid; gap: 20px; grid-template-columns: 1fr; }
-    @media (min-width: 860px) { .works { grid-template-columns: 1fr 1fr; } }
     .work { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
     .work:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
     .work:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
@@ -264,6 +263,7 @@
     .work-flow, .work-chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
     .work-flow li, .work-chips li { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--title); }
     .work-flow li + li::before { content: "→ "; color: var(--blue); }
+    @media (min-width: 860px) { .work { flex-direction: row; } .work img { width: 55%; flex: none; aspect-ratio: auto; height: auto; border-bottom: 0; border-right: 1px solid var(--line); } .work-body { justify-content: center; padding: 28px; } }
     /* 문의 띠 */
     .band { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-radius: 16px; background: var(--soft); }
     .band p { margin: 0; color: var(--title); font-weight: 600; }
@@ -491,12 +491,8 @@
         <h2 class="reveal">블루엠파트너스가 만들고 운영하는 것</h2>
         <div class="works reveal">
           <a class="work" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
-            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary 첫 화면" width="960" height="600" loading="lazy">
+            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary 첫 화면" width="927" height="579" loading="lazy">
             <span class="work-body"><span class="case-tag">생활 금융 정보 블로그 · 기획부터 운영까지</span><strong>Financial Diary</strong><span class="case-desc">세금·연금·대출처럼 생활에 꼭 필요한 금융 정보를 쉽게 풀어 쓰는 블로그입니다.</span><ul class="work-flow"><li>기획</li><li>디자인·개발</li><li>검색 노출</li><li>꾸준한 운영</li></ul><span class="case-link">financialdiary.co.kr 방문하기 <span aria-hidden="true">↗</span></span></span>
-          </a>
-          <a class="work" href="/build/">
-            <img src="/assets/work-bluem-site.jpg" alt="블루엠파트너스 홈페이지 화면" width="960" height="600" loading="lazy">
-            <span class="work-body"><span class="case-tag">회사 홈페이지 · 직접 구축</span><strong>bluem-partners.com</strong><span class="case-desc">지금 보고 계신 이 홈페이지도 블루엠파트너스가 직접 만들고 운영합니다.</span><ul class="work-chips"><li>한국어·영어·일본어·중국어</li><li>휴대폰 화면·야간 모드</li><li>배포 전 자동 검사</li></ul><span class="case-link">구축 과정 보기 <span aria-hidden="true">→</span></span></span>
           </a>
         </div>
         <div class="aiflow-wrap reveal">
@@ -504,7 +500,7 @@
           <ol class="aiflow">
             <li><span class="who">기획</span><b>주제 선정과 초안</b><p>운영 기획에 맞춰 주제를 고르고, 글과 설명 그림 초안을 만듭니다.</p></li>
             <li><span class="who">검사</span><b>게시 전 검사</b><p>광고 표시, 이미지 중복, 요약과 본문의 숫자 대조를 검사하고, 사실·숫자를 한 번 더 점검합니다.</p></li>
-            <li><span class="who human">확인</span><b>사람이 확인 후 게시</b><p>사람이 읽고 확인한 글만 게시합니다.</p></li>
+            <li><span class="who human">확인</span><b>최종 검수 후 게시</b><p>내용과 출처를 마지막으로 한 번 더 검수한 글만 게시합니다.</p></li>
           </ol>
           <p class="aiflow-note">월간 운영 리포트도 숫자 근거와 과장 표현을 검수한 뒤 전달합니다.</p>
           <a class="aiflow-more" href="/build/#ai-team">함께 일하는 방식 보기 →</a>

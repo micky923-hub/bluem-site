@@ -94,6 +94,13 @@
     .org-points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
     .org-points li { padding: 14px 16px; border-left: 3px solid var(--sky); background: var(--soft); border-radius: 0 12px 12px 0; }
     .org-points b { color: var(--title); }
+    .faq { margin: 0; display: grid; gap: 10px; }
+    .faq details { border: 1px solid var(--line); border-radius: 14px; background: var(--card); padding: 0 18px; }
+    .faq summary { cursor: pointer; list-style: none; padding: 16px 0; font-weight: 700; color: var(--title); display: flex; justify-content: space-between; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--blue); font-weight: 700; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq p { margin: 0 0 16px; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -109,6 +116,8 @@
         </svg>
         BlueM Partners
       </a>
+      <nav class="sub-nav" aria-label="Main menu"><a href="/en/fast/">Advertising</a><a href="/en/build/">Websites</a><a href="/en/#work">Work</a><a class="nav-cta" href="/en/#contact">Contact</a></nav>
+      <nav class="sub-lang" aria-label="Language"><a href="/build/" hreflang="ko">KO</a><a href="/en/build/" hreflang="en" aria-current="page">EN</a><a href="/ja/build/" hreflang="ja">JA</a><a href="/zh/build/" hreflang="zh-Hans">ZH</a></nav>
     </div>
   </header>
 
@@ -169,6 +178,17 @@
         <h2>How a project runs</h2>
         <ol class="steps flow"><li><div><b>Inquiry</b><span>The service you want, reference sites and timing</span></div></li><li><div><b>Requirements</b><span>Pages, languages, features, domain and materials</span></div></li><li><div><b>Quote and proposal</b><span>Scope, schedule and price</span></div></li><li><div><b>Contract</b><span>Scope, review period and revision rounds agreed</span></div></li><li><div><b>Planning and design</b><span>Page structure and design drafts</span></div></li><li><div><b>Build and review</b><span>Revisions on a preview link</span></div></li><li><div><b>Launch</b><span>Domain connection and search registration prep</span></div></li><li><div><b>Operation and maintenance</b><span>Updates and checks after launch</span></div></li></ol>
         <p class="price-note">Cost depends on scope, number of pages and features. We quote after a consultation.</p>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details><summary>How long does it take?</summary><p>It depends on the number of pages, languages and features. Once requirements are clear, we propose a step-by-step schedule.</p></details>
+          <details><summary>How many rounds of revisions are included?</summary><p>The number of revisions and the review period are agreed and written into the contract. You review on a preview link and send comments.</p></details>
+          <details><summary>Do you look after the site after launch?</summary><p>Yes. We can take on operation and maintenance, such as content updates, new pages and regular checks.</p></details>
+          <details><summary>What about the domain and hosting?</summary><p>We help connect your existing domain or set up a new one, and suggest hosting that fits the site and keeps running costs low.</p></details>
+          <details><summary>How much does it cost?</summary><p>It depends on scope and features. We quote after a consultation.</p></details>
+        </div>
       </section>
 
       <section class="cta">

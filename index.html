@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>블루엠파트너스 BlueM Partners | 믿을 수 있는 비즈니스 연결</title>
-  <meta name="description" content="블루엠파트너스(BlueM Partners)는 옥외광고(OOH)를 중심으로 스트리밍 TV(FAST) 같은 광고 매체를 광고주와 연결하고, 홈페이지·웹 서비스를 구축합니다.">
+  <meta name="description" content="블루엠파트너스(BlueM Partners)는 스트리밍 TV(FAST) 광고와 크리에이터 채널 입점 같은 새로운 광고 매체를 연결하고, 홈페이지·웹 서비스를 구축합니다.">
   <meta name="keywords" content="블루엠파트너스, 블루엠, BlueM Partners, bluempartners, 광고 매체 판매대행, DOOH, 디지털 옥외광고, FAST, CTV, 미디어렙, 영업대행">
   <meta name="robots" content="index, follow">
   <!-- 검색엔진 소유 확인 코드: 받으면 아래 주석을 풀고 값만 넣는다 -->
@@ -25,7 +25,7 @@
   <meta property="og:site_name" content="블루엠파트너스">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:title" content="블루엠파트너스 | 믿을 수 있는 비즈니스 연결">
-  <meta property="og:description" content="옥외광고를 중심으로 한 광고 매체와 홈페이지·서비스 구축을, 그것이 필요한 기업과 연결합니다.">
+  <meta property="og:description" content="새로운 광고 매체와 홈페이지·서비스 구축을, 그것이 필요한 기업과 연결합니다.">
   <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -49,7 +49,7 @@
     "logo": "https://bluem-partners.com/assets/icon-512.png",
     "image": "https://bluem-partners.com/assets/og-image.png",
     "slogan": "믿을 수 있는 비즈니스 연결. Your Reliable Business Partner.",
-    "description": "옥외광고를 중심으로 한 광고 매체와 홈페이지·서비스 구축을, 그것이 필요한 기업과 연결하는 세일즈 하우스",
+    "description": "새로운 광고 매체와 홈페이지·서비스 구축을, 그것이 필요한 기업과 연결하는 세일즈 하우스",
     "email": "contact@bluem-partners.com",
     "sameAs": [
       "https://www.youtube.com/@bluem-partners"
@@ -105,6 +105,7 @@
       --card: #FFFFFF;
       --field-line: #CBD3DF;
       --title: var(--navy);
+      --on-dark: #FFFFFF;
       --ill-bg: #E8F1FD;
       --max: 1040px;
       color-scheme: light dark;
@@ -238,6 +239,39 @@
       font-size: 15px; font-weight: 600; text-decoration: none;
     }
     .card .more:hover { text-decoration: underline; }
+    /* 머리글 메뉴 */
+    .top-nav { display: flex; align-items: center; gap: 4px; margin-left: auto; margin-right: 12px; }
+    .top-nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 15px; font-weight: 600; padding: 6px 10px; border-radius: 999px; }
+    .top-nav a:hover { color: var(--on-dark); background: rgba(255,255,255,.08); }
+    .top-nav a.nav-cta { background: var(--blue); color: var(--on-dark); }
+    @media (max-width: 640px) { .top-nav a:not(.nav-cta) { display: none; } .top-nav { margin-right: 8px; } }
+    @media (max-width: 640px) { .hero .mark { opacity: .06; } }
+    /* 목적별 길 */
+    .paths { margin-top: 28px; }
+    .paths p { margin: 0 0 10px; color: var(--sky); font-size: 14px; font-weight: 600; }
+    .paths ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .paths a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); background: rgba(12,35,64,.72); color: var(--on-dark); text-decoration: none; font-size: 15px; font-weight: 600; }
+    .paths a:hover { border-color: var(--on-dark); background: rgba(255,255,255,.08); }
+    /* 사례 */
+    .works { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .works { grid-template-columns: 1fr 1fr; } }
+    .work { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .work:hover { border-color: var(--sky); box-shadow: 0 10px 30px rgba(12,35,64,.08); transform: translateY(-2px); }
+    .work:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+    .work img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: var(--soft); }
+    .work-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+    .work-body strong { font-size: 22px; color: var(--title); letter-spacing: -0.02em; }
+    .work-flow, .work-chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    .work-flow li, .work-chips li { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--title); }
+    .work-flow li + li::before { content: "→ "; color: var(--blue); }
+    /* 문의 띠 */
+    .band { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-radius: 16px; background: var(--soft); }
+    .band p { margin: 0; color: var(--title); font-weight: 600; }
+    /* 문의 뒤 진행 순서 */
+    .next-steps { margin: 0 auto 28px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; counter-reset: n; max-width: 760px; }
+    .next-steps li { counter-increment: n; font-size: 14px; font-weight: 600; color: var(--title); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+    .next-steps li::before { content: counter(n) ". "; color: var(--blue); }
+    .steps-h { margin: 0 0 12px !important; font-size: 15px; font-weight: 700; color: var(--muted) !important; }
     .card .more + .more { display: block; margin-top: 8px; }
 
     /* ④-2 운영 사례 */
@@ -384,6 +418,7 @@
         </svg>
         BlueM Partners
       </a>
+      <nav class="top-nav" aria-label="주요 메뉴"><a href="#services">서비스</a><a href="#work">사례</a><a href="#contact" class="nav-cta">문의</a></nav>
       <details class="lang-menu"><summary class="lang" aria-label="Language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>KO ▾</summary><ul><li><a href="/" hreflang="ko" lang="ko" aria-current="page">한국어</a></li><li><a href="/en/" hreflang="en" lang="en">English</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文（简体）</a></li></ul></details>
     </div>
   </header>
@@ -401,10 +436,11 @@
       <div class="wrap">
         <p class="eyebrow">Your Reliable Business Partner</p>
         <h1>믿을 수 있는<br>비즈니스 연결.</h1>
-        <p class="lead">블루엠파트너스는 옥외광고를 중심으로 한 광고 매체와 홈페이지·서비스 구축을, 그것이 필요한 기업과 연결합니다.</p>
+        <p class="lead">블루엠파트너스는 스트리밍 TV(FAST) 같은 새로운 광고 매체와 홈페이지·서비스 구축을, 그것이 필요한 기업과 연결합니다.</p>
         <div class="hero-actions">
           <a class="btn" href="/contact/">문의하기 <span aria-hidden="true">→</span></a>
         </div>
+        <div class="paths"><p>무엇을 도와드릴까요?</p><ul><li><a href="/fast/">광고를 집행하려면 <span aria-hidden="true">→</span></a></li><li><a href="/build/">홈페이지를 만들려면 <span aria-hidden="true">→</span></a></li><li><a href="/fast/#creators">채널을 입점하려면 <span aria-hidden="true">→</span></a></li></ul></div>
       </div>
     </section>
 
@@ -428,7 +464,7 @@
           <article class="card reveal">
             <span class="bar" style="background: var(--title)"></span>
             <h3>광고 매체 연결</h3>
-            <p>지하철·매장·도심 랜드마크의 옥외광고(OOH)를 중심으로, 스트리밍 TV(FAST) 같은 새 광고 지면을 광고주와 연결합니다.</p>
+            <p>스트리밍 TV(FAST) 광고와 유튜브 크리에이터의 FAST 채널 입점처럼, 새로 생기는 광고 지면을 광고주·크리에이터와 연결합니다.</p>
             <a class="more" href="/fast/">K20과 함께하는 FAST 광고 <span aria-hidden="true">→</span></a>
             <a class="more" href="/fast/#creators">유튜브 크리에이터 FAST 입점 <span aria-hidden="true">→</span></a>
           </article>
@@ -452,16 +488,17 @@
     <section class="block" id="work">
       <div class="wrap">
         <p class="label reveal">Our Work</p>
-        <h2 class="reveal">블루엠파트너스가 운영하는 미디어</h2>
-        <a class="case reveal" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
-          <span class="case-mark" aria-hidden="true">FD</span>
-          <span class="case-body">
-            <span class="case-tag">생활 금융 정보 블로그</span>
-            <strong>Financial Diary</strong>
-            <span class="case-desc">세금·연금·대출처럼 생활에 꼭 필요한 금융 정보를 쉽게 풀어 쓰는 블로그입니다. 블루엠파트너스가 콘텐츠 기획부터 사이트 개발·운영, 검색 노출까지 맡고 있습니다.</span>
-            <span class="case-link">financialdiary.co.kr 방문하기 <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
+        <h2 class="reveal">블루엠파트너스가 만들고 운영하는 것</h2>
+        <div class="works reveal">
+          <a class="work" href="https://financialdiary.co.kr/" target="_blank" rel="noopener">
+            <img src="/assets/work-financial-diary.jpg" alt="Financial Diary 첫 화면" width="960" height="600" loading="lazy">
+            <span class="work-body"><span class="case-tag">생활 금융 정보 블로그 · 기획부터 운영까지</span><strong>Financial Diary</strong><span class="case-desc">세금·연금·대출처럼 생활에 꼭 필요한 금융 정보를 쉽게 풀어 쓰는 블로그입니다.</span><ul class="work-flow"><li>기획</li><li>디자인·개발</li><li>검색 노출</li><li>꾸준한 운영</li></ul><span class="case-link">financialdiary.co.kr 방문하기 <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <a class="work" href="/build/">
+            <img src="/assets/work-bluem-site.jpg" alt="블루엠파트너스 홈페이지 화면" width="960" height="600" loading="lazy">
+            <span class="work-body"><span class="case-tag">회사 홈페이지 · 직접 구축</span><strong>bluem-partners.com</strong><span class="case-desc">지금 보고 계신 이 홈페이지도 블루엠파트너스가 직접 만들고 운영합니다.</span><ul class="work-chips"><li>한국어·영어·일본어·중국어</li><li>휴대폰 화면·야간 모드</li><li>배포 전 자동 검사</li></ul><span class="case-link">구축 과정 보기 <span aria-hidden="true">→</span></span></span>
+          </a>
+        </div>
         <div class="aiflow-wrap reveal">
           <h3>이렇게 운영합니다</h3>
           <ol class="aiflow">
@@ -472,6 +509,8 @@
           <p class="aiflow-note">월간 운영 리포트는 마케팅팀장 AI가 숫자 근거와 과장 표현을 검수한 뒤 사람이 확인합니다.</p>
           <a class="aiflow-more" href="/build/#ai-team">AI 팀 전체 보기 →</a>
         </div>
+      
+        <div class="band reveal"><p>맡기실 일이 아직 정해지지 않았어도 괜찮습니다. 편하게 물어보세요.</p><a class="btn" href="/contact/">문의하기 <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
@@ -548,7 +587,9 @@
       <div class="wrap reveal">
         <p class="label">Contact</p>
         <h2>함께할 일이 있다면</h2>
-        <p>광고 매체, 기술 프로젝트, 미디어 운영, 제휴 문의 모두 편하게 남겨 주세요.</p>
+        <p>광고 매체, 홈페이지·서비스 구축, 채널 입점, 미디어 운영, 제휴 문의 모두 편하게 남겨 주세요.</p>
+        <p class="steps-h">문의하면 이렇게 진행됩니다</p>
+        <ol class="next-steps"><li>문의 남기기</li><li>2영업일 안에 답변</li><li>상담으로 범위 정리</li><li>제안·견적</li></ol>
         <div class="actions">
           <a class="btn" href="/contact/">문의하기 <span aria-hidden="true">→</span></a>
           <a class="btn ghost js-mail" href="mailto:contact@bluem-partners.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D">메일 보내기</a>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>户外广告 | BlueM Partners</title>
+  <meta name="description" content="BlueM Partners 为广告主和代理商对接户外广告媒体：公寓电梯屏幕、城市数字与户外媒体、程序化 DOOH，也可承接公共机构广告。">
+  <link rel="canonical" href="https://bluem-partners.com/zh/ooh/">
+  <link rel="alternate" hreflang="ko" href="https://bluem-partners.com/ooh/">
+  <link rel="alternate" hreflang="en" href="https://bluem-partners.com/en/ooh/">
+  <link rel="alternate" hreflang="ja" href="https://bluem-partners.com/ja/ooh/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bluem-partners.com/zh/ooh/">
+  <link rel="alternate" hreflang="x-default" href="https://bluem-partners.com/ooh/">
+  <meta name="theme-color" content="#0C2340">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bluem-partners.com/zh/ooh/">
+  <meta property="og:title" content="户外广告 | BlueM Partners">
+  <meta property="og:description" content="BlueM Partners 为广告主和代理商对接户外广告媒体：公寓电梯屏幕、城市数字与户外媒体、程序化 DOOH，也可承接公共机构广告。">
+  <meta property="og:image" content="https://bluem-partners.com/assets/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/sub.css">
+  <style>
+    /* 옥외광고 페이지 전용 (공통은 /assets/sub.css) */
+    .ooh section { margin: 0 0 60px; }
+    .ooh h2 { margin: 0 0 14px; font-size: 24px; color: var(--title); letter-spacing: -0.02em; text-wrap: balance; }
+    .ooh .intro { margin: 0 0 24px; font-size: 17px; }
+    .products { display: grid; gap: 16px; }
+    @media (min-width: 860px) { .products { grid-template-columns: repeat(3, 1fr); } }
+    .product { border: 1px solid var(--line); border-top: 6px solid var(--title); border-radius: 16px; padding: 22px 20px; background: var(--card); }
+    .product:nth-child(2) { border-top-color: var(--blue); }
+    .product:nth-child(3) { border-top-color: var(--sky); }
+    .product .tag { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+    .product h3 { margin: 4px 0 8px; font-size: 20px; color: var(--title); letter-spacing: -0.02em; }
+    .product p { margin: 0 0 12px; }
+    .product ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
+    .price-note { margin: 14px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--soft); font-size: 15px; }
+    .price-note + .price-note { margin-top: 8px; }
+    .roles { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 720px) { .roles { grid-template-columns: 1fr 1fr; } }
+    .roles li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .roles b { display: block; color: var(--title); font-size: 18px; margin-bottom: 4px; }
+    .roles p { margin: 0; color: var(--muted); }
+    .gov { background: var(--soft); border-left: 4px solid var(--blue); border-radius: 0 16px 16px 0; padding: 22px 24px; }
+    .gov h2 { font-size: 20px; margin-bottom: 8px; }
+    .gov p { margin: 0; }
+    .steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 12px; }
+    .steps li { counter-increment: s; display: flex; gap: 12px; align-items: baseline; }
+    .steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; }
+    .steps b { color: var(--title); }
+    .steps small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+    .s-note { margin: 16px 0 0; color: var(--muted); font-size: 15px; }
+    .cta { background: var(--navy); color: #fff; border-radius: 18px; padding: 28px 24px; }
+    .cta h2 { color: #fff; }
+    .cta p { color: #D5DEEB; margin: 0 0 20px; }
+    .cta .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .cta .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.45); }
+    .cta .addr { color: #D5DEEB; font-size: 15px; }
+    .back { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+    @media (prefers-color-scheme: dark) {
+      .cta { background: var(--card); border: 1px solid var(--line); }
+      .steps li::before { background: var(--blue); }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/zh/" aria-label="BlueM Partners 首页">
+        <svg viewBox="0 0 2000 1536" aria-hidden="true">
+          <rect x="0" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+          <rect x="428" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="857" y="928" width="286" height="608" rx="143" fill="#71B0E8"/>
+          <rect x="1285" y="500" width="286" height="1036" rx="143" fill="#307FE2"/>
+          <rect x="1714" y="0" width="286" height="1536" rx="143" fill="#FFFFFF"/>
+        </svg>
+        BlueM Partners
+      </a>
+      <nav class="sub-nav" aria-label="主菜单"><a href="/zh/fast/">广告媒体</a><a href="/zh/build/">网站建设</a><a href="/zh/#work">案例</a><a class="nav-cta" href="/zh/#contact">联系</a></nav>
+      <nav class="sub-lang" aria-label="Language"><a href="/ooh/" hreflang="ko">KO</a><a href="/en/ooh/" hreflang="en">EN</a><a href="/ja/ooh/" hreflang="ja">JA</a><a href="/zh/ooh/" hreflang="zh-Hans" aria-current="page">ZH</a></nav>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap">
+      <h1>户外广告 (OOH·DOOH)</h1>
+      <p>我们为广告主和代理商对接人们每天经过之处的户外广告媒体，从媒体选择到投放结果确认全程协助。</p>
+    </div>
+  </section>
+
+  <main class="ooh">
+    <div class="wrap">
+      <section>
+        <h2>可对接的媒体</h2>
+        <p class="intro">从居住的地方、往来的道路，到您想要的时段。我们根据活动目标和区域推荐合适的媒体。</p>
+        <div class="products">
+          <article class="product"><span class="tag">Apartment</span><h3>公寓电梯·生活空间</h3><p>全国公寓电梯内屏幕和小区数字公告栏，是居民每天进出都会看到的生活类媒体。</p><ul><li>全国公寓电梯内屏幕</li><li>公寓小区数字公告栏</li></ul></article>
+          <article class="product"><span class="tag">Digital OOH</span><h3>数字·户外媒体</h3><p>位于市中心和生活圈的数字屏幕与户外媒体，根据目标和区域推荐合适的媒体。</p><ul><li>数字屏幕与户外媒体</li><li>按目标与区域组合媒体</li></ul></article>
+          <article class="product"><span class="tag">Programmatic DOOH</span><h3>程序化 DOOH</h3><p>选择时段和地点，在数字户外屏幕上自动投放广告的方式。</p><ul><li>按时段·地点投放</li><li>根据活动目标分批投放</li></ul></article>
+        </div>
+        <p class="price-note">新增的媒体确认后会陆续加到本页。即使没有您要找的媒体，告诉我们目标和区域，我们会为您寻找合适的媒体。</p>
+        <p class="price-note">广告费用因媒体、期间和剩余档期而异，请咨询我们。素材制作费用另计。</p>
+      </section>
+
+      <section>
+        <h2>BlueM Partners 的角色</h2>
+        <ul class="roles"><li><b>媒体策划</b><p>根据目标、受众、区域和预算推荐媒体组合。</p></li><li><b>档期确认·预订</b><p>先确认您希望投放期间的剩余档期，并代为向媒体方提交预订。</p></li><li><b>素材规格·刊登标准确认</b><p>整理各媒体的素材规格，并提前确认广告内容是否符合刊登标准和户外广告相关法规。</p></li><li><b>投放结果报告</b><p>投放结束后转交媒体方的投放结果报告。</p></li></ul>
+      </section>
+
+      <section class="gov">
+        <h2>也可承接公共机构广告</h2>
+        <p>公共机构和地方政府的广告也按照政府广告流程进行，我们备有证明媒体销售权限的文件。</p>
+      </section>
+
+      <section>
+        <h2>合作流程</h2>
+        <ol class="steps"><li><span><b>咨询</b><small>请告诉我们目标、区域、预算和投放时间</small></span></li><li><span><b>确认档期·推荐媒体</b></span></li><li><span><b>签约·预订</b><small>媒体方通常在 2 个工作日内确认</small></span></li><li><span><b>提交素材·确认刊登标准</b></span></li><li><span><b>投放</b></span></li><li><span><b>结果报告</b><small>投放结束后 10 天内提供</small></span></li></ol>
+        <p class="s-note">若因媒体方原因出现投放问题，将重新投放或以补偿投放处理。</p>
+      </section>
+
+      <section class="cta">
+        <h2>正在规划户外广告吗？</h2>
+        <p>告诉我们希望的区域、时间和预算，我们会回复剩余档期和合适的媒体。我们以韩语或英语回复。</p>
+        <div class="actions">
+            <a class="btn" href="mailto:contact@bluem-partners.com?subject=%5BOOH%20Advertising%5D">发送邮件</a>
+            <span class="addr">contact@bluem-partners.com</span>
+        </div>
+      </section>
+
+      <a class="back" href="/zh/">← BlueM Partners 首页</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year">2026</span> BlueM Partners</span>
+      <span style="display:inline-flex;gap:20px;align-items:center"><a href="/privacy/">隐私政策（韩语）</a> <a class="yt" href="https://www.youtube.com/@bluem-partners" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>YouTube</span></a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <a class="fab-contact" href="/zh/#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>联系我们</a>
+  <script>
+    (function () {
+      var b = document.querySelector('.fab-contact'); if (!b) return;
+      var c = document.getElementById('contact'), inContact = false;
+      if (c && 'IntersectionObserver' in window) new IntersectionObserver(function (e) { inContact = e[0].isIntersecting; t(); }).observe(c);
+      function t() { b.classList.toggle('show', window.scrollY > 320 && !inContact); }
+      window.addEventListener('scroll', t, { passive: true }); t();
+    })();
+  </script>
+</body>
+</html>
